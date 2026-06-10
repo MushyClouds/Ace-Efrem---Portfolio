@@ -3,7 +3,7 @@
 page = entire page (like the background)
 card = section of page
 
-
+site
 about-me-page
 profile-card
 ‎skills-card‎
@@ -18,12 +18,76 @@ academics-card
 extracurriculars-page
 
 */
-
-.about-me-page {
-  border: 8px solid #cccccc;
-  border-radius: 8px; /* Optinally curves the border corners */
+.site {
+  border: 8px solid #FFECD1;
+  border-radius: 8px; /* curves border corners */
+  background-color: #FFECD1;
   padding: 30px;
 }
+
+.about-me-page {
+  border: 8px solid #78290F;
+  border-radius: 8px; /* curves border corners */
+  background-color: #78290F;
+  padding: 30px;
+}
+
+.profile-card {
+  border: 8px solid #78290F;
+  border-radius: 8px; /* curves border corners */
+  background-color: #78290F;
+  padding: 30px;
+}
+
+.skills-card {
+  border: 8px solid #78290F;
+  border-radius: 8px; /* curves border corners */
+  background-color: #78290F;
+  padding: 30px;
+}
+
+.certifications-achievements-card {
+  border: 8px solid #cccccc;
+  border-radius: 8px; /* curves border corners */
+  background-color: #cccccc;
+  padding: 30px;
+}
+
+.work-experience-page {
+  border: 8px solid #cccccc;
+  border-radius: 8px; /* curves border corners */
+  background-color: #cccccc;
+  padding: 30px;
+}
+
+.experience-card {
+  border: 8px solid #cccccc;
+  border-radius: 8px; /* curves border corners */
+  background-color: #cccccc;
+  padding: 30px;
+}
+
+.academics-page {
+  border: 8px solid #cccccc;
+  border-radius: 8px; /* curves border corners */
+  background-color: #cccccc;
+  padding: 30px;
+}
+
+.academics-card {
+  border: 8px solid #cccccc;
+  border-radius: 8px; /* curves border corners */
+  background-color: #cccccc;
+  padding: 30px;
+}
+
+.extracurriculars-page {
+  border: 8px solid #cccccc;
+  border-radius: 8px; /* curves border corners */
+  background-color: #cccccc;
+  padding: 30px;
+}
+
 
 
 /*
