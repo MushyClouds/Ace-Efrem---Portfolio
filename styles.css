@@ -36,23 +36,23 @@ projects-card
 }
 
 .profile-card {
-  border: 8px solid #78290F;
+  border: 8px solid #FF7D00;
   border-radius: 8px; /* curves border corners */
-  background-color: #78290F;
+  background-color: #FF7D00;
   padding: 30px;
 }
 
 .skills-card {
-  border: 8px solid #78290F;
+  border: 8px solid #FF7D00;
   border-radius: 8px; /* curves border corners */
-  background-color: #78290F;
+  background-color: #FF7D00;
   padding: 30px;
 }
 
 .certifications-achievements-card {
-  border: 8px solid #cccccc;
+  border: 8px solid #FF7D00;
   border-radius: 8px; /* curves border corners */
-  background-color: #cccccc;
+  background-color: #FF7D00;
   padding: 30px;
 }
 
