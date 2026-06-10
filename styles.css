@@ -17,6 +17,9 @@ academics-card
 
 extracurriculars-page
 
+projects-page
+projects-card
+
 */
 .site {
   border: 8px solid #FFECD1;
@@ -88,6 +91,19 @@ extracurriculars-page
   padding: 30px;
 }
 
+.projects-page {
+  border: 8px solid #cccccc;
+  border-radius: 8px; /* curves border corners */
+  background-color: #cccccc;
+  padding: 30px;
+}
+
+.projects-card {
+  border: 8px solid #cccccc;
+  border-radius: 8px; /* curves border corners */
+  background-color: #cccccc;
+  padding: 30px;
+}
 
 
 /*
