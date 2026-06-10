@@ -21,6 +21,14 @@ projects-page
 projects-card
 
 */
+
+/* Reset default browser margins and padding */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
 .site {
   border: 8px solid #FFECD1;
   border-radius: 16px; /* curves border corners */
@@ -30,34 +38,45 @@ projects-card
 
 .site-header {
     display: flex;
-    justify-content: space-between; /* Pushes name to left, nav to right */
+    justify-content: space-between; /* Pushes logo to left, nav to right */
     align-items: center;
-    padding: 20px 10px; /* adds breathing room around stuff */
+    padding: 24px 8px; /* adds breathing room around stuff */
     background-color: #001524;
+    color: #fff;
 }
 
-.site-header-buttons {
-  border: 8px solid #15616D;
-  border-radius: 16px; /* curves border corners */
-  background-color: #15616D;
-  padding: 32px;
-  color: #fff;
-  text-decoration: none;          /* removes icky link underline */
+/* make it go long */
+.site-navigation ul {
+    display: flex;
+    list-style: none;
 }
 
-.site-name {
-  border: 8px solid #FFECD1;
-  border-radius: 16px; /* curves border corners */
-  background-color: #FFECD1;
-  padding: 32px;
+/* make it go apart */
+.site-navigation li {
+    margin-left: 24px;
 }
 
-.site-navigation {
-  border: 8px solid #FFECD1;
-  border-radius: 16px; /* curves border corners */
-  background-color: #FFECD1;
-  padding: 32px;
+/* make it perty */
+.site-navigation a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 16px;
+    transition: color 0.3s; /* mmmm smooth color transition on hoverrr */
 }
+
+/* change colour on hover */
+.navigation a:hover {
+    color: #FF7D00;
+}
+
+.site-name a {
+    font-size: 24px;
+    font-weight: bold;
+    color: #fff;
+    text-decoration: none;          /* removes icky link underline */
+}
+
+
 
 .about-me-page {
   border: 8px solid #78290F;
