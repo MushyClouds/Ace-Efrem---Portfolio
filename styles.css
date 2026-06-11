@@ -61,12 +61,18 @@ projects-card
     color: #fff;
     text-decoration: none;
     font-size: 16px;
-    transition: color 0.3s; /* mmmm smooth color transition on hoverrr */
+    background-color: #15616D; /* box background colour */
+    padding: 10px 18px; /* Top/Bottom and Left/Right spacing inside  box */
+    border: 2px solid #15616D;  /* box outline */
+    border-radius: 8px;  /* Rounds the corners of the box */
+    transition: all 0.3s ease; /* smoothly animates colours on hover */
 }
 
 /* change colour on hover */
 .navigation a:hover {
-    color: #FF7D00;
+    background-color: #FFECD1;   /* changes box background  */
+    border-color: #FFECD1;        /* changes box background*/
+    color: #000;    /* changes text to black for better contrast */
 }
 
 .site-name a {
