@@ -38,6 +38,7 @@ html {
     box-sizing: border-box;
 }
 
+
 .about-me-page,
 .work-experience-page,
 .academics-page,
@@ -45,6 +46,7 @@ html {
 .projects-page {
     scroll-margin-top: 150px;
 }
+
 
 .site {
   border: 8px solid #FFECD1;
@@ -109,9 +111,20 @@ html {
   border-radius: 16px; /* curves border corners */
   background-color: #78290F;
   padding: 32px;
+
+/*the grid column stuf*/
+    display: grid;
+    grid-template-columns: 2fr 1fr; /* 50% / 25% / 25% */
+    grid-template-rows: 1fr 1fr;
+    grid-template-areas:
+        "profile skills"
+        "profile certs";
+    gap: 20px;
 }
 
 .profile-card {
+    grid-area: profile;
+    min-height: 100%;
   border: 8px solid #FF7D00;
   border-radius: 16px; /* curves border corners */
   background-color: #FF7D00;
@@ -119,6 +132,7 @@ html {
 }
 
 .skills-card {
+    grid-area: skills;
   border: 8px solid #FF7D00;
   border-radius: 16px; /* curves border corners */
   background-color: #FF7D00;
@@ -126,6 +140,8 @@ html {
 }
 
 .certifications-achievements-card {
+    grid-area: certs;
+    min-height: 200px;
   border: 8px solid #FF7D00;
   border-radius: 16px; /* curves border corners */
   background-color: #FF7D00;
