@@ -1,3 +1,177 @@
+
+
+/* =========================
+   page setup
+   ========================= */
+
+/* pushes content down so header doesn't cover it */
+body {
+    padding-top: 120px;
+}
+
+/* makes the thingies in the header smoothly scroll instead of jumping when clicked */
+html {
+    scroll-behavior: smooth;
+}
+
+/* resets browser defaults for more consistent styling */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+
+/* =========================
+   section scrolling
+   ========================= */
+
+/* offsets scroll position so fixed header doesn't hide section titles */
+.about-me-page,
+.work-experience-page,
+.academics-page,
+.extracurriculars-page,
+.projects-page {
+    scroll-margin-top: 150px;
+}
+
+
+/* =========================
+   site wrappa
+   ========================= */
+/* contains all page content */
+.site {
+    border: 8px solid #FFECD1;
+    border-radius: 16px; /* rounds corners */
+    background-color: #FFECD1;
+    padding: 32px; /* space between border and content */
+}
+
+
+/* =========================
+   header
+   ========================= */
+/* keeps header visible at the top while scrolling */
+.site-header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: #001524;
+    display: flex;
+    flex-direction: column; /* stacks title above navigation */
+    align-items: center; /* centers items horizontally */
+    padding: 24px 0;
+    z-index: 1000; /* makes sure header stays above everything else */
+}
+
+
+/* =========================
+   navigation
+   ========================= */
+/* arranges navigation links in a row */
+.site-navigation ul {
+    display: flex;
+    list-style: none; /* removes bullet points */
+    gap: 20px; /* spacing between links */
+    margin-top: 20px;
+    flex-wrap: wrap; /* allows links to move to a new line if needed */
+    justify-content: center; /* centers links long ways */
+}
+
+/* makes navigation links perty*/
+.site-navigation a {
+    color: #FFECD1;
+    text-decoration: none; /* removes icky underline */
+    font-size: 18px;
+    font-weight: 500;
+    padding: 6px 0;
+    transition: color 0.3s ease; /* make that colour change smooth on hober now (:,' */
+}
+
+/* actually changes colour when hovering */
+.site-navigation a:hover {
+    color: #FF7D00;
+}
+
+
+
+/* =========================
+   site title
+   ========================= */
+/* styles portfolio title */
+.site-name a {
+    font-size: 42px;
+    font-weight: bold;
+    color: #FFECD1;
+    text-decoration: none;
+    letter-spacing: 3px; /* increases spacing between letters */
+    margin-bottom: 12px;
+}
+
+
+
+/* =========================
+   about section
+   ========================= */
+.about-me-page {
+    border: 8px solid #78290F;
+    border-radius: 16px;
+    background-color: #78290F;
+    padding: 32px;
+    
+    display: grid; /* put everythin on a grid now (honestly a big brain move im proud) */
+    grid-template-columns: 1fr 2fr; /* creates 2 columns: left gets 1 part, right gets 2 parts */
+    grid-template-rows: 1fr 1fr; /* creates 2 equal rows */
+    grid-template-areas: /* names areas of the grid honestly im too lazy to change the name template from makin this earlier */
+        "profile skills"
+        "profile certs";
+    gap: 20px; /* spacing between grid items */
+}
+
+
+/* =========================
+   about cards
+   ========================= */
+.profile-card {
+    grid-area: profile; /* places this card in the "profile" area */
+    height: 100%; /* stretches to fill its grid space */
+    border: 8px solid #FF7D00;
+    border-radius: 16px;
+    background-color: #FF7D00;
+    padding: 32px;
+}
+
+.skills-card {
+    grid-area: skills; /* places this card in the "skills" area */
+    min-height: 200px; /* prevents card from becoming too short */
+    border: 8px solid #FF7D00;
+    border-radius: 16px;
+    background-color: #FF7D00;
+    padding: 32px;
+}
+
+.certifications-achievements-card {
+    grid-area: certs; /* places this card in the certifications or "certs" area */
+    min-height: 200px;
+    border: 8px solid #FF7D00;
+    border-radius: 16px;
+    background-color: #FF7D00;
+    padding: 32px;
+}
+
+
+/* =========================
+   work experience
+   ========================= */
+.work-experience-page {
+    border: 8px solid #cccccc;
+    border-radius: 16px;
+    background-color: #cccccc;
+    padding: 32px;
+}
+
 /* All classes used in index.htnl 
 
 page = entire page (like the background)
@@ -21,204 +195,61 @@ projects-page
 projects-card
 
 */
-
-/* Reset default browser margins and padding */
-
-body {
-    padding-top: 120px;
-}
-
-html {
-    scroll-behavior: smooth;
-}
-
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-
-.about-me-page,
-.work-experience-page,
-.academics-page,
-.extracurriculars-page,
-.projects-page {
-    scroll-margin-top: 150px;
-}
-
-
-.site {
-  border: 8px solid #FFECD1;
-  border-radius: 16px; /* curves border corners */
-  background-color: #FFECD1;
-  padding: 32px;
-}
-
-.site-header {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-
-    background-color: #001524;
-
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-
-    padding: 24px 0;
-
-    z-index: 1000;
-}
-
-.site-navigation ul {
-    display: flex;
-    list-style: none;
-    gap: 20px;
-    margin-top: 20px;
-    flex-wrap: wrap;
-    justify-content: center;
-}
-
-/* make it perty */
-.site-navigation a {
-    color: #FFECD1;
-    text-decoration: none;
-    font-size: 18px;
-    font-weight: 500;
-    padding: 6px 0;
-    transition: color 0.3s ease;
-}
-
-/* change colour on hover */
-.site-navigation a:hover {
-    color: #FF7D00;
-}
-
-.site-name a {
-    font-size: 42px;
-    font-weight: bold;
-    color: #FFECD1;
-    text-decoration: none;
-    letter-spacing: 3px;
-    margin-bottom: 12px;
-}
-
-
-.about-me-page {
-  border: 8px solid #78290F;
-  border-radius: 16px; /* curves border corners */
-  background-color: #78290F;
-  padding: 32px;
-
-/*the grid column stuf*/
-    display: grid;
-    grid-template-columns: 1fr 2fr; /* 33% / 66% */
-    grid-template-rows: 1fr 1fr;
-    grid-template-areas:
-        "profile skills"
-        "profile certs";
-    gap: 20px;
-}
-
-.profile-card {
-    grid-area: profile;
-    height: 100%;
-  border: 8px solid #FF7D00;
-  border-radius: 16px; /* curves border corners */
-  background-color: #FF7D00;
-  padding: 32px;
-}
-
-.skills-card {
-    grid-area: skills;
-    min-height: 200px;
-  border: 8px solid #FF7D00;
-  border-radius: 16px; /* curves border corners */
-  background-color: #FF7D00;
-  padding: 32px;
-
-}
-
-.certifications-achievements-card {
-    grid-area: certs;
-    min-height: 200px;
-  border: 8px solid #FF7D00;
-  border-radius: 16px; /* curves border corners */
-  background-color: #FF7D00;
-  padding: 32px;
-}
-
-.work-experience-page {
-  border: 8px solid #cccccc;
-  border-radius: 16px; /* curves border corners */
-  background-color: #cccccc;
-  padding: 32px;
-}
-
 .experience-card {
-  border: 8px solid #cccccc;
-  border-radius: 16px; /* curves border corners */
-  background-color: #cccccc;
-  padding: 32px;
+    border: 8px solid #cccccc;
+    border-radius: 16px;
+    background-color: #cccccc;
+    padding: 32px;
 }
+
+
+/* =========================
+   academics
+   ========================= */
 
 .academics-page {
-  border: 8px solid #cccccc;
-  border-radius: 16px; /* curves border corners */
-  background-color: #cccccc;
-  padding: 32px;
+    border: 8px solid #cccccc;
+    border-radius: 16px;
+    background-color: #cccccc;
+    padding: 32px;
 }
 
 .academics-card {
-  border: 8px solid #cccccc;
-  border-radius: 16px; /* curves border corners */
-  background-color: #cccccc;
-  padding: 32px;
+    border: 8px solid #cccccc;
+    border-radius: 16px;
+    background-color: #cccccc;
+    padding: 32px;
 }
+
+
+/* =========================
+   extracurriculars
+   ========================= */
 
 .extracurriculars-page {
-  border: 8px solid #cccccc;
-  border-radius: 16px; /* curves border corners */
-  background-color: #cccccc;
-  padding: 32px;
+    border: 8px solid #cccccc;
+    border-radius: 16px;
+    background-color: #cccccc;
+    padding: 32px;
 }
 
+
+/* =========================
+   projects
+   ========================= */
+
 .projects-page {
-  border: 8px solid #cccccc;
-  border-radius: 16px; /* curves border corners */
-  background-color: #cccccc;
-  padding: 32px;
+    border: 8px solid #cccccc;
+    border-radius: 16px;
+    background-color: #cccccc;
+    padding: 32px;
 }
 
 .projects-card {
-  border: 8px solid #cccccc;
-  border-radius: 16px; /* curves border corners */
-  background-color: #cccccc;
-  padding: 32px;
+    border: 8px solid #cccccc;
+    border-radius: 16px;
+    background-color: #cccccc;
+    padding: 32px;
 }
 
 
-/*
-refrence code
-
-body {
-  background-color: black;
-}
-h1 {
-  color: orange;
-}
-h2 {
-  color: orange;
-}
-h3 {
-  color: orange;
-}
-h4 {
-  color: orange;
-}
-p {
-  color: white;
-}
-*/
