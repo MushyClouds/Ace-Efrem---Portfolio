@@ -62,9 +62,9 @@ html {
    ========================= */
 /* contains all page content */
 .site {
-    border: 8px solid #FFECD1;
+    border: 8px solid #001524;
     border-radius: 16px; /* rounds corners */
-    background-color: #FFECD1;
+    background-color: #FFFFFF;
     padding: 32px; /* space between border and content */
 }
 
