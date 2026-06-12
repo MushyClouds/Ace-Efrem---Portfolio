@@ -21,10 +21,26 @@ html {
     box-sizing: border-box;
 }
 
-/* GIVE IT SOME SPACE */
+/* GIVE IT SOME SPACE (SCRAPPED)
 .page-spacer {
     height: 32px;
 }
+                        */
+
+
+/* =========================
+   page spacing systm
+   ========================= */
+
+/* adds space between big sections (pages) so they dont kiss each other */
+.about-me-page,
+.work-experience-page,
+.academics-page,
+.extracurriculars-page,
+.projects-page {
+    margin-bottom: 32px; /* gap between each full page section */
+}
+
 
 
 /* =========================
@@ -71,6 +87,24 @@ html {
 }
 
 
+
+/* =========================
+   card spacing systm
+   ========================= */
+
+/* adds space between stacked cards inside each page section */
+.profile-card,
+.skills-card,
+.certifications-achievements-card,
+.experience-card,
+.academics-card,
+.extracurriculars-card,
+.projects-card {
+    margin-bottom: 20px; /* spacing between individual cards */
+}
+
+
+
 /* =========================
    navigation
    ========================= */
@@ -110,7 +144,7 @@ html {
     font-weight: bold;
     color: #FFECD1;
     text-decoration: none;
-    letter-spacing: 3px; /* increases spacing between letters */
+    letter-spacing: 3px;
     margin-bottom: 12px;
 }
 
