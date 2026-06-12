@@ -28,10 +28,22 @@ body {
     padding-top: 170px;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+}
+
+.about-me-page,
+.work-experience-page,
+.academics-page,
+.extracurriculars-page,
+.projects-page {
+    scroll-margin-top: 180px;
 }
 
 .site {
