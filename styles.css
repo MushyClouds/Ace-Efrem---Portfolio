@@ -266,6 +266,9 @@ html {
     background-color: #FFECD1;
     color: #001524;
     padding: 32px;
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
 }
 
 .academics-card {
@@ -276,6 +279,14 @@ html {
     padding: 32px;
 }
 
+.course-card {
+    background-color: #15616D;
+    color: #FFECD1;
+    padding: 16px;
+    border-radius: 12px;
+    margin-top: 12px;
+    border: 4px solid #15616D;
+}
 
 /* =========================
    extracurriculars
