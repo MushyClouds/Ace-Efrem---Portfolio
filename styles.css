@@ -114,7 +114,7 @@ html {
 
 /*the grid column stuf*/
     display: grid;
-    grid-template-columns: 2fr 1fr; /* 50% / 25% / 25% */
+    grid-template-columns: 1fr 2fr; /* 33% / 66% */
     grid-template-rows: 1fr 1fr;
     grid-template-areas:
         "profile skills"
@@ -124,7 +124,7 @@ html {
 
 .profile-card {
     grid-area: profile;
-    min-height: 100%;
+    height: 100%;
   border: 8px solid #FF7D00;
   border-radius: 16px; /* curves border corners */
   background-color: #FF7D00;
@@ -133,10 +133,12 @@ html {
 
 .skills-card {
     grid-area: skills;
+    min-height: 200px;
   border: 8px solid #FF7D00;
   border-radius: 16px; /* curves border corners */
   background-color: #FF7D00;
   padding: 32px;
+
 }
 
 .certifications-achievements-card {
