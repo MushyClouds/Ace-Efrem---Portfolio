@@ -21,6 +21,10 @@ html {
     box-sizing: border-box;
 }
 
+/* GIVE IT SOME SPACE */
+.page-spacer {
+    height: 32px;
+}
 
 
 /* =========================
@@ -166,9 +170,74 @@ html {
    work experience
    ========================= */
 .work-experience-page {
-    border: 8px solid #cccccc;
+    border: 8px solid #15616D;
     border-radius: 16px;
-    background-color: #cccccc;
+    background-color: #15616D;
+    padding: 32px;
+}
+
+.experience-card {
+    border: 8px solid #FFECD1;
+    border-radius: 16px;
+    background-color: #FFECD1;
+    padding: 32px;
+}
+
+
+/* =========================
+   academics
+   ========================= */
+
+.academics-page {
+    border: 8px solid #FFECD1;
+    border-radius: 16px;
+    background-color: #FFECD1;
+    padding: 32px;
+}
+
+.academics-card {
+    border: 8px solid #15616D;
+    border-radius: 16px;
+    background-color: #15616D;
+    color: #FFECD1;
+    padding: 32px;
+}
+
+
+/* =========================
+   extracurriculars
+   ========================= */
+
+.extracurriculars-page {
+    border: 8px solid #FF7D00;
+    border-radius: 16px;
+    background-color: #FF7D00;
+    padding: 32px;
+}
+
+.extracurriculars-card {
+    border: 8px solid #FFECD1;
+    border-radius: 16px;
+    background-color: #FFECD1;
+    padding: 32px;
+}
+
+/* =========================
+   projects
+   ========================= */
+
+.projects-page {
+    border: 8px solid #001524;
+    border-radius: 16px;
+    background-color: #001524;
+    padding: 32px;
+}
+
+.projects-card {
+    border: 8px solid #15616D;
+    border-radius: 16px;
+    background-color: #15616D;
+    color: #FFECD1;
     padding: 32px;
 }
 
@@ -195,61 +264,3 @@ projects-page
 projects-card
 
 */
-.experience-card {
-    border: 8px solid #cccccc;
-    border-radius: 16px;
-    background-color: #cccccc;
-    padding: 32px;
-}
-
-
-/* =========================
-   academics
-   ========================= */
-
-.academics-page {
-    border: 8px solid #cccccc;
-    border-radius: 16px;
-    background-color: #cccccc;
-    padding: 32px;
-}
-
-.academics-card {
-    border: 8px solid #cccccc;
-    border-radius: 16px;
-    background-color: #cccccc;
-    padding: 32px;
-}
-
-
-/* =========================
-   extracurriculars
-   ========================= */
-
-.extracurriculars-page {
-    border: 8px solid #cccccc;
-    border-radius: 16px;
-    background-color: #cccccc;
-    padding: 32px;
-}
-
-
-/* =========================
-   projects
-   ========================= */
-
-.projects-page {
-    border: 8px solid #cccccc;
-    border-radius: 16px;
-    background-color: #cccccc;
-    padding: 32px;
-}
-
-.projects-card {
-    border: 8px solid #cccccc;
-    border-radius: 16px;
-    background-color: #cccccc;
-    padding: 32px;
-}
-
-
