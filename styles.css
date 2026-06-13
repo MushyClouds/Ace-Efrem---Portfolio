@@ -292,18 +292,42 @@ html {
    extracurriculars
    ========================= */
 
+/* title stretch across all 3 columns */
+.extracurriculars-header {
+    grid-column: 1 / -1;
+}
+
 .extracurriculars-page {
     border: 8px solid #FF7D00;
     border-radius: 16px;
     background-color: #FF7D00;
     padding: 32px;
+
+    /* turns extracurricular cards into a grid */
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
 }
 
+.extracurriculars-title-card {
+    border: 8px solid #FFECD1;
+    border-radius: 16px;
+    background-color: #FFECD1;
+    padding: 32px;
+}
+
+.extracurriculars-subtitle-card {
+    border: 8px solid #FF7D00;
+    border-radius: 16px;
+    background-color: #FF7D00;
+    padding: 32px;
+}
 .extracurriculars-card {
     border: 8px solid #FFECD1;
     border-radius: 16px;
     background-color: #FFECD1;
     padding: 32px;
+    height: 100%;
 }
 
 /* =========================
