@@ -320,7 +320,8 @@ html {
     border: 8px solid #FF7D00;
     border-radius: 16px;
     background-color: #FF7D00;
-    padding: 32px;
+    padding: 16px;
+    min-height: 20%;
 }
 .extracurriculars-card {
     border: 8px solid #FFECD1;
