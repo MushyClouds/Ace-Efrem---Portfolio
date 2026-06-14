@@ -206,6 +206,7 @@ html {
 .cert-grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
+    grid-area: certs;
     gap: 16px;
 }
 
