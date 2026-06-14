@@ -350,8 +350,16 @@ html {
     background-color: #15616D;
     color: #FFECD1;
     padding: 32px;
+    min-height: 400px; /* makes the boxes have to be bigger */
 }
 
+/* arranges project cards side by side */
+.projects-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* 2 equal columns */
+    gap: 20px; /* spacing between cards */
+}
+   
 /* All classes used in index.htnl 
 
 page = entire page (like the background)
