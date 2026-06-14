@@ -161,9 +161,7 @@ html {
     
     display: grid; /* put everythin on a grid now (honestly a big brain move im proud) */
     grid-template-columns: 1fr 2fr; /* creates 2 columns: left gets 1 part, right gets 2 parts */
-    grid-template-rows: 1fr 1fr; /* creates 2 equal rows */
     grid-template-areas: /* names areas of the grid honestly im too lazy to change the name template from makin this earlier */
-        "profile skills"
         "profile certs";
     gap: 20px; /* spacing between grid items */
 }
@@ -181,6 +179,7 @@ html {
     padding: 32px;
 }
 
+/* dormant */
 .skills-card {
     grid-area: skills; /* places this card in the "skills" area */
     min-height: 200px; /* prevents card from becoming too short */
@@ -189,6 +188,7 @@ html {
     background-color: #FF7D00;
     padding: 32px;
 }
+
 
 .certifications-achievements-card {
     grid-area: certs; /* places this card in the certifications or "certs" area */
@@ -199,6 +199,51 @@ html {
     padding: 32px;
 }
 
+/* =========================
+   certification certificate grid
+   ========================= */
+
+.cert-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 16px;
+}
+
+/* certificate card style */
+.cert-card {
+    border: 4px solid #FFECD1;
+    border-radius: 16px;
+    background-color: #FFECD1;
+    color: #001524;
+    padding: 18px;
+    min-height: 140px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    text-align: center;
+}
+
+/* small label at top */
+.cert-card h4 {
+    font-size: 12px;
+    letter-spacing: 2px;
+    margin-bottom: 8px;
+    opacity: 0.7;
+}
+
+/* main title */
+.cert-card h3 {
+    font-size: 16px;
+    margin-bottom: 6px;
+}
+
+/* subtitle text */
+.cert-card p {
+    font-size: 13px;
+    opacity: 0.8;
+}
 
 /* =========================
    work experience (UNSCRAPPED)
@@ -358,6 +403,20 @@ html {
     display: grid;
     grid-template-columns: 1fr 1fr; /* 2 equal columns */
     gap: 20px; /* spacing between cards */
+}
+
+/* =========================
+   footer contacts thingy
+   ========================= */
+
+/* stuffs the contacts at the very bottm */
+.site-footer {
+    background-color: #001524;
+    color: #FFECD1;
+    text-align: center;
+    padding: 32px;
+    margin-top: 32px;
+    border-radius: 16px;
 }
    
 /* All classes used in index.htnl 
