@@ -26,7 +26,18 @@ html {
     height: 20px;
 }
                         
+/*fix page layout*/
+.about-me-page,
+.work-experience-page,
+.academics-page,
+.extracurriculars-page,
+.projects-page {
+    display: block;
+}
 
+.site > div {
+    width: 100%;
+}
 
 /* =========================
    page spacing systm
@@ -158,12 +169,13 @@ html {
     border-radius: 16px;
     background-color: #78290F;
     padding: 32px;
-    
-    display: grid; /* put everythin on a grid now (honestly a big brain move im proud) */
-    grid-template-columns: 1fr 2fr; /* creates 2 columns: left gets 1 part, right gets 2 parts */
-    grid-template-areas: /* names areas of the grid honestly im too lazy to change the name template from makin this earlier */
+
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    grid-template-areas:
         "profile certs";
-    gap: 20px; /* spacing between grid items */
+    gap: 20px;
+    align-items: start;
 }
 
 
@@ -204,9 +216,9 @@ html {
    ========================= */
 
 .cert-grid {
+    grid-area: certs;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    grid-area: certs;
     gap: 16px;
 }
 
