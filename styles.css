@@ -48,7 +48,7 @@ html {
 }
 
 .grow-element:hover {
-  transform: scale(1.10); /* Grows the element by 10% */
+  transform: scale(1.07); /* Grows the element by 7% */
 }
 
 
