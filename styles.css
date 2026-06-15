@@ -40,6 +40,19 @@ html {
 }
 
 /* =========================
+   fun site animations
+   ========================= */
+
+.grow-element {
+  transition: transform 0.3s ease-in-out; /* Controls the speed and smoothness */
+}
+
+.grow-element:hover {
+  transform: scale(1.10); /* Grows the element by 10% */
+}
+
+
+/* =========================
    page spacing systm
    ========================= */
 
