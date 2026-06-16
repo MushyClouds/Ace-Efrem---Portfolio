@@ -68,7 +68,7 @@ body {
 
     display: flex;
     flex-direction: column; /* STACKS CONTENT */
-    align-items: center;
+    align-items: left;
 
     font-family: "Tahoma", sans-serif;
     font-size: 13px;
