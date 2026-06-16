@@ -1,6 +1,6 @@
-/* =========================================================
+/* =========================
    BASE RESET
-   ========================================================= */
+   ========================= */
 
 * {
     margin: 0;
@@ -8,9 +8,9 @@
     box-sizing: border-box;
 }
 
-/* =========================================================
+/* =========================
    DESKTOP BACKGROUND
-   ========================================================= */
+   ========================= */
 
 body {
     height: 100vh;
@@ -22,9 +22,9 @@ body {
     background-position: center;
 }
 
-/* =========================================================
+/* =========================
    DESKTOP WRAPPER
-   ========================================================= */
+   ========================= */
 
 .desktop {
     width: 100%;
@@ -35,9 +35,9 @@ body {
     justify-content: center;
 }
 
-/* =========================================================
+/* =========================
    APP WINDOW (WIN98 CORE FRAME)
-   ========================================================= */
+   ========================= */
 
 .app-window {
     width: 1100px;
@@ -56,9 +56,9 @@ body {
     box-shadow: 0px 4px 12px rgba(0,0,0,0.35);
 }
 
-/* =========================================================
-   TITLE BAR (WINDOW HEADER UI)
-   ========================================================= */
+/* =========================
+   TITLE BAR (FIXED LAYOUT)
+   ========================= */
 
 .title-bar {
     background: #000080;
@@ -74,22 +74,28 @@ body {
     font-size: 13px;
 
     border-bottom: 2px solid #404040;
-
-    position: relative;
 }
 
-/* LEFT SIDE (title + nav) */
+/* left side */
 .title-left {
     display: flex;
     flex-direction: column;
     gap: 3px;
 }
 
+/* right side */
+.title-right {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+/* title text */
 .title-text {
     font-weight: bold;
 }
 
-/* NAV LINKS UNDER TITLE */
+/* nav */
 .header-nav {
     display: flex;
     gap: 10px;
@@ -107,14 +113,10 @@ body {
     border: 1px inset white;
 }
 
-/* RIGHT SIDE (splash + buttons) */
-.title-right {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-}
+/* =========================
+   WINDOW CONTROLS
+   ========================= */
 
-/* WINDOW CONTROLS */
 .window-controls {
     display: flex;
     gap: 2px;
@@ -139,16 +141,9 @@ body {
     color: black;
 }
 
-.btn.minimize::after { content: "_"; }
-.btn.maximize::after { content: "□"; }
-
-.btn.close {
-    font-weight: bold;
-}
-
-/* =========================================================
+/* =========================
    SPLASH TEXT (minecraft-style rotating text)
-   ========================================================= */
+   ========================= */
 
 .splash-text {
     color: yellow;
@@ -162,14 +157,46 @@ body {
 }
 
 @keyframes splashPulse {
-    0%   { transform: scale(1) rotate(-10deg); }
+    0%   { transform: scale(1) rotate(-10deg); } /*start anim */
     50%  { transform: scale(1.05) rotate(-10deg); }
     100% { transform: scale(1) rotate(-10deg); }
 }
 
-/* =========================================================
-   SCROLLABLE CONTENT AREA
-   ========================================================= */
+/* =========================
+   TAB BAR
+   ========================= */
+
+.browser-bar {
+    display: flex;
+    gap: 4px;
+
+    background: #d4d0c8;
+    padding: 4px;
+
+    border-bottom: 2px solid #808080;
+}
+
+.tab {
+    background: #c0c0c0;
+
+    padding: 4px 10px;
+
+    font-family: Tahoma;
+    font-size: 12px;
+
+    border-top: 2px solid #ffffff;
+    border-left: 2px solid #ffffff;
+    border-right: 2px solid #404040;
+    border-bottom: none;
+}
+
+.tab.active {
+    background: #ffffff;
+}
+
+/* =========================
+   CONTENT AREA
+   ========================= */
 
 .app-content {
     flex: 1;
@@ -179,28 +206,15 @@ body {
     background: #f5f5f5;
 }
 
-/* fake scrollbar */
-.app-content::-webkit-scrollbar {
-    width: 12px;
-}
-
-.app-content::-webkit-scrollbar-track {
-    background: #ddd;
-}
-
-.app-content::-webkit-scrollbar-thumb {
-    background: #888;
-}
-
-/* =========================================================
+/* =========================
    MYSPACE CORE LAYOUT
-   ========================================================= */
+   ========================= */
 
 .myspace-container {
-    font-family: Tahoma, sans-serif;
+    font-family: Tahoma;
 }
 
-/* TOP BLUE PROFILE HEADER */
+/* header */
 .myspace-header {
     background: #003399;
     color: white;
@@ -220,40 +234,31 @@ body {
     margin-top: 4px;
 }
 
-/* TWO COLUMN LAYOUT */
 .myspace-layout {
     display: grid;
     grid-template-columns: 280px 1fr;
     gap: 10px;
 }
 
-/* LEFT PANEL */
-.left-column {
-    background: #e6e6e6;
-    border: 2px solid #808080;
-    padding: 10px;
-}
-
-/* RIGHT PANEL */
+.left-column,
 .right-column {
-    background: white;
-    border: 2px solid #808080;
     padding: 10px;
+    border: 2px solid #808080;
 }
 
-/* =========================================================
-   PROFILE MODULE (LEFT PANEL CONTENT)
-   ========================================================= */
+.left-column { background: #e6e6e6; }
+.right-column { background: white; }
 
-.profile-module {
-    font-family: Tahoma;
-}
+/* =========================
+   PROFILE MODULE
+   ========================= */
 
 .profile-name {
     font-size: 20px;
     font-weight: bold;
 }
 
+/* reusable spacer block */
 .spacer {
     height: 10px;
 }
