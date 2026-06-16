@@ -203,7 +203,6 @@ html, body {
    ========================= */
 .profile-card {
     grid-area: profile; /* places this card in the "profile" area */
-    height: 100%; /* stretches to fill its grid space */
     border: 8px solid #FF7D00;
     border-radius: 16px;
     background-color: #FF7D00;
