@@ -794,19 +794,6 @@ body {
 /* =========================
 WIN98 STYLE FRAME FOR MSPAINT BOXES
    ========================= */
-.paint-window {
-    display: flex;
-    flex-direction: column;
-
-    background: #c0c0c0;
-
-    border-top: 3px solid #ffffff;
-    border-left: 3px solid #ffffff;
-    border-right: 3px solid #808080;
-    border-bottom: 3px solid #404040;
-
-    box-shadow: 2px 2px 0 #b3b3b3;
-}
 
 /* ======TITLE BAR======== */
 .paint-titlebar {
@@ -942,25 +929,40 @@ WIN98 STYLE FRAME FOR MSPAINT BOXES
 .color:nth-child(15) { background: #ffd000; }
 .color:nth-child(16) { background: #ffffff; }
 
+/* =========================
+   EXTRACURRICULARS LAYOUT
+   ========================= */
 
-.extracurriculars-wrapper  .paint-window {
+.extracurriculars-wrapper {
     display: flex;
-    flex-direction: row;
     gap: 12px;
+
+    flex-wrap: nowrap;
+    overflow-x: auto;
 
     align-items: flex-start;
 
-    flex-wrap: nowrap; /* keeps them in one line */
-    overflow-x: auto;  /* allows scroll if screen is too small */
-    margin: 0 auto;    /* Centers the wrapper horizontally */
-
-    width: 280px;
-    flex: 0 0 auto;
+    width: 100%;
+    padding-bottom: 8px;
 }
 
-/* optional: prevents shrinking */
+.extracurriculars-wrapper .paint-window {
+    width: 320px;
+    flex-shrink: 0;
+}
+
 .paint-window {
-    flex: 0 0 auto;
+    display: flex;
+    flex-direction: column;
+
+    background: #c0c0c0;
+
+    border-top: 3px solid #ffffff;
+    border-left: 3px solid #ffffff;
+    border-right: 3px solid #808080;
+    border-bottom: 3px solid #404040;
+
+    box-shadow: 2px 2px 0 #b3b3b3;
 }
 
 
@@ -975,20 +977,6 @@ WIN98 STYLE FRAME FOR MSPAINT BOXES
 
     width: 100%;
     align-items: start;
-}
-/* shared window style (you already mostly have this) */
-.paint-window {
-    display: flex;
-    flex-direction: column;
-
-    background: #c0c0c0;
-
-    border-top: 3px solid #ffffff;
-    border-left: 3px solid #ffffff;
-    border-right: 3px solid #808080;
-    border-bottom: 3px solid #404040;
-
-    box-shadow: 2px 2px 0 #b3b3b3;
 }
 
 /* title bar */
