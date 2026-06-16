@@ -586,14 +586,13 @@ body {
 
     margin-right: 6px;
 
-    background-image: url("https://i.redd.it/kksrotgwyya61.png");
     background-size: contain;
     background-repeat: no-repeat;
 }
 
 /* tiny window icon */
 .sticky-titlebar::before {
-    content: "🪟";
+    background-image: url("https://i.redd.it/kksrotgwyya61.png");
     margin-right: 6px;
 }
 
