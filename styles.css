@@ -682,10 +682,83 @@ body {
     margin-top: 4px;
 }
 
+
 /* =========================
-    WIN98 PAINT EXTRACURRICULARS
+   WIN98 MS PAINT EXTRACURRICULARS
    ========================= */
 
+/* OUTER LAYOUT: THIS holds ALL 3 windows */
+.extracurriculars-wrapper {
+    display: flex;
+    gap: 12px;
+    align-items: flex-start;
+    flex-wrap: nowrap;
+
+    margin-top: 10px;
+}
+
+/* =====PAINT WINDOWS======= */
+.paint-window {
+    display: flex;
+    flex-direction: column;
+    width: 260px;
+
+    background: #FFFF99;
+
+    border-top: 3px solid #ffffff;
+    border-left: 3px solid #ffffff;
+    border-right: 3px solid #808080;
+    border-bottom: 3px solid #404040;
+
+    box-shadow: 2px 2px 0 #b3b3b3;
+}
+
+/* ====== LEFT TOOL BAR ========== */
+.paint-tools {
+    width: 40px;
+
+    background: #c0c0c0;
+
+    border-right: 2px solid #808080;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 6px;
+
+    padding: 4px;
+}
+
+/* tool buttons */
+.tool {
+    width: 22px;
+    height: 22px;
+
+    background: #d4d0c8;
+
+    border-top: 2px solid #ffffff;
+    border-left: 2px solid #ffffff;
+    border-right: 2px solid #404040;
+    border-bottom: 2px solid #404040;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-size: 12px;
+}
+
+/* ====RIGHT CONTENT AREA========== */
+.paint-content {
+    flex: 1;
+
+    padding: 8px;
+
+    font-family: Tahoma, sans-serif;
+    font-size: 12px;
+}
+
+/* ====== PALETTE ========== */
 .paint-palette {
     margin-top: 10px;
 
@@ -718,29 +791,3 @@ body {
 .color:nth-child(5) { background: #00ff00; }
 .color:nth-child(6) { background: #ff7a00; }
 .color:nth-child(7) { background: #00a2ff; }
-
-
-/* ============FORCE EXTRACURRICULAR PAINT BOXES INTO A ROW================ */
-
-/* this targets whatever container is holding the paint-canvas boxes */
-.paint-canvas {
-    width: 220px;
-    display: inline-block;
-    vertical-align: top;
-}
-
-/* makes sure they sit next to each other */
-.extracurriculars,
-.extracurriculars-card,
-div {
-    /* only affects layout flow, not appearance */
-}
-
-/* safer actual layout fix */
-body .extracurriculars-card {
-    display: flex;
-    flex-direction: row;
-    gap: 10px;
-    align-items: flex-start;
-    flex-wrap: nowrap;
-}
