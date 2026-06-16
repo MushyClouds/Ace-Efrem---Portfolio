@@ -683,27 +683,16 @@ body {
 }
 
 
+
 /* =========================
-   WIN98 MS PAINT EXTRACURRICULARS
+WIN98 STYLE FRAME FOR MSPAINT BOXES
    ========================= */
-
-/* OUTER LAYOUT: THIS holds ALL 3 windows */
-.extracurriculars-wrapper {
-    display: flex;
-    gap: 12px;
-    align-items: flex-start;
-    flex-wrap: nowrap;
-
-    margin-top: 10px;
-}
-
-/* =====PAINT WINDOWS======= */
 .paint-window {
+    width: 280px;
     display: flex;
     flex-direction: column;
-    width: 260px;
 
-    background: #FFFF99;
+    background: #c0c0c0;
 
     border-top: 3px solid #ffffff;
     border-left: 3px solid #ffffff;
@@ -713,28 +702,72 @@ body {
     box-shadow: 2px 2px 0 #b3b3b3;
 }
 
-/* ====== LEFT TOOL BAR ========== */
-.paint-tools {
-    width: 40px;
+/* ======TITLE BAR======== */
+.paint-titlebar {
+    background: #000080;
+    color: white;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    padding: 4px 6px;
+
+    font-family: Tahoma;
+    font-size: 12px;
+}
+
+/* window buttons */
+.window-controls {
+    display: flex;
+    gap: 2px;
+}
+
+.btn {
+    width: 16px;
+    height: 14px;
 
     background: #c0c0c0;
 
-    border-right: 2px solid #808080;
+    border-top: 2px solid #ffffff;
+    border-left: 2px solid #ffffff;
+    border-right: 2px solid #404040;
+    border-bottom: 2px solid #404040;
 
     display: flex;
-    flex-direction: column;
+    justify-content: center;
     align-items: center;
-    gap: 6px;
 
+    font-size: 10px;
+}
+
+/* ==========MAIN BODY (TOOLS + CANVAS)============ */
+.paint-body {
+    display: flex;
+    background: #c0c0c0;
+}
+
+/* =====TOOL GRID (7 x 2)======= */
+.paint-tools {
+    width: 70px;
+    background: #d4d0c8;
+
+    border-right: 2px solid #808080;
     padding: 4px;
 }
 
-/* tool buttons */
-.tool {
-    width: 22px;
-    height: 22px;
+/* 7 x 2 grid */
+.tool-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 4px;
+}
 
-    background: #d4d0c8;
+.tool {
+    width: 26px;
+    height: 26px;
+
+    background: #e6e6e6;
 
     border-top: 2px solid #ffffff;
     border-left: 2px solid #ffffff;
@@ -745,45 +778,46 @@ body {
     align-items: center;
     justify-content: center;
 
-    font-size: 12px;
+    font-size: 11px;
 }
 
-/* ====RIGHT CONTENT AREA========== */
+/* ======WHITE CANVAS AREA======== */
 .paint-content {
     flex: 1;
+    background: white;
 
-    padding: 8px;
+    padding: 10px;
 
-    font-family: Tahoma, sans-serif;
+    font-family: Tahoma;
     font-size: 12px;
 }
 
-/* ====== PALETTE ========== */
+/* ====COLOR PALETTE (2 x 8 GRID)====== */
 .paint-palette {
-    margin-top: 10px;
+    display: grid;
+    grid-template-columns: repeat(8, 1fr);
+    grid-auto-rows: 14px;
 
-    display: flex;
-    gap: 4px;
+    gap: 2px;
+
+    padding: 6px;
 
     background: #c0c0c0;
 
     border-top: 2px solid #ffffff;
     border-left: 2px solid #ffffff;
-    border-right: 2px solid #404040;
+    border-right: 2px solid #808080;
     border-bottom: 2px solid #404040;
-
-    padding: 4px;
-    width: fit-content;
 }
 
-/* base color squares */
+/* colors */
 .color {
-    width: 16px;
-    height: 16px;
+    width: 14px;
+    height: 14px;
     border: 1px solid #000;
 }
 
-/* neon palette */
+/* neon palette expanded */
 .color:nth-child(1) { background: #ff0055; }
 .color:nth-child(2) { background: #00ffcc; }
 .color:nth-child(3) { background: #fffb00; }
@@ -791,3 +825,13 @@ body {
 .color:nth-child(5) { background: #00ff00; }
 .color:nth-child(6) { background: #ff7a00; }
 .color:nth-child(7) { background: #00a2ff; }
+.color:nth-child(8) { background: #ff2bd6; }
+
+.color:nth-child(9) { background: #00ffd5; }
+.color:nth-child(10) { background: #d4ff00; }
+.color:nth-child(11) { background: #ff3c00; }
+.color:nth-child(12) { background: #2b6bff; }
+.color:nth-child(13) { background: #b400ff; }
+.color:nth-child(14) { background: #00ff88; }
+.color:nth-child(15) { background: #ffd000; }
+.color:nth-child(16) { background: #ffffff; }
