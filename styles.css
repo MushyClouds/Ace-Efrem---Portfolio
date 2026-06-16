@@ -298,6 +298,22 @@ html, body {
     text-align: center;
 }
 
+/* the odd balls with my achievements */
+.weird-card {
+    border: 4px solid #FFECD1;
+    border-radius: 16px;
+    background-color: #FFECD1;
+    color: #001524;
+    padding: 18px;
+    min-height: 140px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    text-align: center;
+}
+
 /* small label at top */
 .cert-card h4 {
     font-size: 12px;
