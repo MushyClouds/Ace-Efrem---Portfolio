@@ -20,25 +20,28 @@
 
 <div class="title-bar">
 
-    <div class="title-text">
-        Ace Efrem — Portfolio Terminal
+    <div class="title-left">
+        <div class="title-text">
+            Ace Efrem — Portfolio Terminal
+        </div>
+
+        <div class="header-nav">
+            <a href="#about">About</a>
+            <a href="#experience">Work</a>
+            <a href="#education">Education</a>
+            <a href="#education">Extracurriculars</a>
+            <a href="#projects">Projects</a>
+        </div>
     </div>
-    
-    <div class="header-nav">
-    <a href="#about">About</a>
-    <a href="#experience">Work</a>
-    <a href="#education">Education</a>
-    <a href="#education">Extracurriculars</a>    
-    <a href="#projects">Projects</a>
-    </div>
-    
-    <!-- minecrafty splash text tips -->
-    <div id="splash-text" class="splash-text">loading...</div>
-    
-    <div class="window-controls">
-        <div class="btn minimize"></div>
-        <div class="btn maximize"></div>
-        <div class="btn close">X</div>
+
+    <div class="title-right">
+        <div id="splash-text" class="splash-text">loading...</div>
+
+        <div class="window-controls">
+            <div class="btn minimize"></div>
+            <div class="btn maximize"></div>
+            <div class="btn close">X</div>
+        </div>
     </div>
 
 </div>
@@ -123,8 +126,30 @@
 
 </div>
 
+<!--===actual for fun shi===-->
 
+<script>
+const splashes = [
+    "Over 1000 lines of code!",
+    "Inspired by Win98",
+    "Try clicking random things",
+    "Don't close the tab",
+    "My highest typing speed was 120wpm",
+    "Splash text made with JS",
+    "This took awhile..."
+];
 
+    
+let i = 0; // "i" is a counter relating to which phrase is currently in play
+const splash = document.getElementById("splash-text"); // id="splash-text"
+
+function rotateSplash() { // changes the text everytime it runs
+    i = (i + 1) % splashes.length; // move to next item in list
+    splash.textContent = splashes[i]; // replace the text on the page
+}
+    // lowkey havent used JS since elementary school this was hard
+setInterval(rotateSplash, 2000);
+</script>
     
 </body>
 </html>
