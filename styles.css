@@ -184,9 +184,10 @@ html {
     padding: 32px;
 
     display: grid;
-    grid-template-columns: 1fr 2fr;
+    grid-template-columns: 1fr 1fr;
     grid-template-areas:
-        "profile certs";
+        "profile certs"
+        "bio bio";
     gap: 20px;
     align-items: start;
 }
@@ -216,16 +217,28 @@ html {
 
 
 .certifications-achievements-card {
-    grid-area: certs; /* places this card in the certifications or "certs" area */
+    grid-area: certs;
     min-height: 200px;
     border: 8px solid #FF7D00;
     border-radius: 16px;
     background-color: #FF7D00;
     padding: 32px;
+
+    display: flex;
+    flex-direction: column;
+}
+
+.about-bio-card {
+    grid-area: bio;
+    border: 8px solid #FF7D00;
+    border-radius: 16px;
+    background-color: #FF7D00;
+    padding: 24px;
+    color: #001524;
 }
 
 /* =========================
-   certification certificate grid
+   certification certificate !grid!
    ========================= */
 
 .cert-grid {
