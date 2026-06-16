@@ -89,10 +89,30 @@ body {
     white-space: nowrap;
 }
 
+/* left cluster */
+.title-left {
+    display: flex;
+    flex-direction: column;
+}
+
+/* right cluster */
+.title-right {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
 /* right side control cluster */
 .window-controls {
     display: flex;
     gap: 2px;
+}
+
+/* nav under title */
+.header-nav {
+    display: flex;
+    gap: 10px;
+    margin-top: 4px;
 }
 
 /* base button style */
@@ -264,7 +284,7 @@ body {
 .header-nav {
     display: flex;
     gap: 10px;
-    margin-left: 10px;
+    margin-left: 4px;
 }
 
 .header-nav a {
@@ -281,17 +301,19 @@ body {
 }
 /* ===== splash text area ===== */
 .splash-text {
-    font-size: 11px;
     color: yellow;
-
     font-family: "Comic Sans MS", cursive;
+    font-size: 14px;
 
-    margin-right: 10px;
+    transform: rotate(-10deg);
 
-    transform: rotate(-8deg);
+    animation: splashPulse 2s infinite ease-in-out;
+}
 
-    user-select: none;
-    pointer-events: none;
+@keyframes splashPulse {
+    0%   { transform: scale(1) rotate(-10deg); } /* start anim */
+    50%  { transform: scale(1.08) rotate(-10deg); } /* mid anim */
+    100% { transform: scale(1) rotate(-10deg); } /* last anim */
 }
 
 /* =========================
