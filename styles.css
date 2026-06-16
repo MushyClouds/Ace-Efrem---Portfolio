@@ -312,6 +312,14 @@ html, body {
     justify-content: center;
 
     text-align: center;
+
+    transition: all 0.3s ease;
+}
+
+.weird-card:hover {
+    background-color: #001524;
+    color: #FFECD1;
+    border-color: #001524;
 }
 
 /* small label at top */
