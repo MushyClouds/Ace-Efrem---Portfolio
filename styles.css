@@ -537,6 +537,37 @@ body {
 .fill-5 { width: 90%; }
 
 
+/* =========================
+   EDUCATION MODULE CONTAINER
+   ========================= */
+
+.education-window {
+    background: #007b80; /* teal wallpaper */
+
+    padding: 16px;
+
+    /* same beveled frame style as app-window */
+    border-top: 2px solid #ffffff;
+    border-left: 2px solid #ffffff;
+    border-right: 2px solid #404040;
+    border-bottom: 2px solid #404040;
+
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.35);
+
+    margin: 20px 0;
+}
+
+/* make text readable on dark ass background */
+.education-window h1,
+.education-window p {
+    color: white;
+    font-family: Tahoma, sans-serif;
+}
+
+.education-window .sticky-board {
+    margin-top: 10px;
+}
+
 
 /* =========================
    EDUCATION WIN98 STICKYNOTES
