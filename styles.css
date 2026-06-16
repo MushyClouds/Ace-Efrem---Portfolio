@@ -539,64 +539,82 @@ body {
 
 
 /* =========================
-stickynotes for education page
+   WINDOWS 98 STICKY NOTES
    ========================= */
 
 .sticky-board {
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 16px;
-
     margin-top: 10px;
 }
 
-/* MAIN NOTE WINDOW */
+/* ===MAIN WINDOW BODY=== */
 .sticky-window {
-    background: #FFFF00;
+    background: #FFFF99;
 
     border-top: 2px solid #ffffff;
     border-left: 2px solid #ffffff;
-    border-right: 2px solid #404040;
+    border-right: 2px solid #808080;
     border-bottom: 2px solid #404040;
 
     min-height: 260px;
     display: flex;
     flex-direction: column;
+
+    /* 👇 soft floating shadow */
+    box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.25);
+
+    transition: transform 0.15s ease, box-shadow 0.15s ease;
 }
 
-/* DARK GREY TITLE BAR (instead of blue Win98) */
-.sticky-titlebar {
-    background: #404040;
-    color: white;
+/* hover lift (feels like a real window rising) */
+.sticky-window:hover {
+    transform: translateY(-3px);
 
-    padding: 6px 10px;
+    box-shadow:
+        6px 6px 14px rgba(0, 0, 0, 0.35);
+}
+
+/* ====TITLE BAR (WIN98 STYLE)===== */
+.sticky-titlebar {
+    background: linear-gradient(to right, #bdbdbd, #e3e3e3);
+
+    color: black;
+
+    padding: 5px 8px;
 
     font-family: Tahoma, sans-serif;
-    font-size: 13px;
+    font-size: 12px;
+    font-weight: bold;
 
-    border-bottom: 2px solid #202020;
+    display: flex;
+    align-items: center;
+
+    border-bottom: 2px solid #808080;
 }
 
-/* CONTENT AREA */
+/* tiny window icon */
+.sticky-titlebar::before {
+    content: "🪟";
+    margin-right: 6px;
+}
+
+/* ====CONTENT AREA===== */
 .sticky-content {
     padding: 10px;
     font-family: Tahoma, sans-serif;
     font-size: 12px;
+    color: #000;
 }
 
-/* LIST CLEANUP */
-.sticky-content ul {
-    padding-left: 18px;
-    margin-top: 4px;
-}
-
+/* spacing fixes */
 .sticky-content h4 {
     margin-top: 10px;
     margin-bottom: 4px;
 }
 
-/* optional hover lift (subtle, NOT tilt) */
-.sticky-window:hover {
-    transform: scale(1.02);
-    transition: 0.2s ease;
+.sticky-content ul {
+    padding-left: 18px;
+    margin-top: 4px;
 }
