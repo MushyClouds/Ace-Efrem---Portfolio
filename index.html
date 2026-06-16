@@ -31,10 +31,10 @@
         <li class="grow-element"><a href="#contact">Contact Me</a></li>
     </ul>
 </nav>
-    <div class="music-controls"> <!--lets friggin groove-->
-    <button onclick="player.playVideo()" class="music-btn">▶</button>
-    <button onclick="player.pauseVideo()" class="music-btn">⏸</button>
-    <a href="https://www.youtube.com/watch?v=vGxHVf6RTVY&list=RDvGxHVf6RTVY" target="_blank" class="music-btn">🔗</a>
+<div class="music-controls">
+    <button onclick="playMusic()" class="music-btn">▶</button>
+    <button onclick="pauseMusic()" class="music-btn">⏸</button>
+    <a href="https://www.youtube.com/watch?v=vGxHVf6RTVY" target="_blank" class="music-btn">🔗</a>
 </div>
 </header>
 
@@ -522,9 +522,14 @@ window.onload = function () {
 
 <!-- now for the FUN SHIT -->
 
+<!-- YouTube API -->
+<script src="https://www.youtube.com/iframe_api"></script>
+
 <div id="music-player" style="display:none;"></div>
+
 <script>
 let player;
+let isReady = false;
 
 function onYouTubeIframeAPIReady() {
     player = new YT.Player('music-player', {
@@ -532,16 +537,26 @@ function onYouTubeIframeAPIReady() {
         width: '0',
         videoId: 'vGxHVf6RTVY',
         playerVars: {
-            autoplay: 0
+            autoplay: 1,
+            mute: 0
+        },
+        events: {
+            onReady: () => {
+                isReady = true;
+            }
         }
     });
 }
-</script>
 
-<iframe
-src="https://www.youtube.com/embed/vGxHVf6RTVY?autoplay=1&mute=1"
-allow="autoplay">
-</iframe>
+// safety wrappers so buttons don’t explode if clicked early
+function playMusic() {
+    if (isReady) player.playVideo();
+}
+
+function pauseMusic() {
+    if (isReady) player.pauseVideo();
+}
+</script>
     
 </body>
 </html>    
