@@ -551,7 +551,7 @@ body {
 
 /* ===MAIN WINDOW BODY=== */
 .sticky-window {
-    background: #FFFF99;
+    background: #FFFF00;
 
     border-top: 2px solid #ffffff;
     border-left: 2px solid #ffffff;
@@ -562,7 +562,7 @@ body {
     display: flex;
     flex-direction: column;
 
-    /* 👇 soft floating shadow */
+    /* soft floating shadow */
     box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.25);
 
     transition: transform 0.15s ease, box-shadow 0.15s ease;
@@ -577,27 +577,69 @@ body {
 }
 
 /* ====TITLE BAR (WIN98 STYLE)===== */
-.sticky-titlebar {
-    background: linear-gradient(to right, #bdbdbd, #e3e3e3);
+.sticky-titlebar::before {
+    content: "";
+    display: inline-block;
 
-    color: black;
+    width: 14px;
+    height: 14px;
 
-    padding: 5px 8px;
+    margin-right: 6px;
 
-    font-family: Tahoma, sans-serif;
-    font-size: 12px;
-    font-weight: bold;
-
-    display: flex;
-    align-items: center;
-
-    border-bottom: 2px solid #808080;
+    background-image: url("https://i.redd.it/kksrotgwyya61.png");
+    background-size: contain;
+    background-repeat: no-repeat;
 }
 
 /* tiny window icon */
 .sticky-titlebar::before {
     content: "🪟";
     margin-right: 6px;
+}
+
+.sticky-titlebar::after {
+    content: "-  □  X";
+
+    font-family: Tahoma, sans-serif;
+    font-size: 12px;
+    font-weight: bold;
+
+    background: #c0c0c0;
+
+    border-top: 2px solid #ffffff;
+    border-left: 2px solid #ffffff;
+    border-right: 2px solid #404040;
+    border-bottom: 2px solid #404040;
+
+    padding: 0 4px;
+    margin-left: auto;
+
+    display: flex;
+    align-items: center;
+}
+
+.sticky-titlebar {
+    justify-content: space-between;
+    position: relative;
+}
+
+.sticky-window {
+    background: #FFFF99;
+
+    /* thick Win98-style frame */
+    border-top: 3px solid #ffffff;
+    border-left: 3px solid #ffffff;
+    border-right: 3px solid #808080;
+    border-bottom: 3px solid #404040;
+
+    min-height: 260px;
+    display: flex;
+    flex-direction: column;
+
+    /* simple depth (not dramatic) */
+    box-shadow: 2px 2px 0 #b3b3b3;
+
+    transition: transform 0.15s ease;
 }
 
 /* ====CONTENT AREA===== */
