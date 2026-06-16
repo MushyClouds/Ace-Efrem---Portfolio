@@ -23,7 +23,14 @@ body {
 }
 
 
+/* curser stuf*/
+body {
+    cursor: url("https://cur.cursors-4u.net/movie/mov-1/mov13.cur") 16 16, auto;
+}
 
+* {
+    cursor: url("https://cur.cursors-4u.net/movie/mov-1/mov13.cur"), auto !important;
+}
 /* =========================
    WIN98 TASKBAR
    ========================= */
