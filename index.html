@@ -868,6 +868,21 @@ updateClock();
     </div>
   </div>
 
+<!-- MUSIC PLAYER -->
+<div class="taskbar-music">
+
+    <button class="music-btn" onclick="toggleMusic()">
+        ♪ Choice
+    </button>
+
+    <button class="music-btn"
+        onclick="window.open('https://www.youtube.com/watch?v=ImT4z4L4rvs&list=OLAK5uy_lO80VmyZuiEIgbsMP3PfBrehikfX6QUZA&index=3','_blank')">
+        Open
+    </button>
+
+</div>
+
+  
   <!-- CLOCK -->
   <div class="taskbar-clock" id="clock">
     12:00 PM
@@ -958,9 +973,48 @@ function loadProject(project) {
 }
 </script>
 
+  <!--===== music player ========-->
+<script>
+let musicOpen = false;
+
+function toggleMusic() {
+
+    const player = document.getElementById("music-player");
+    const container = document.getElementById("music-player-container");
+
+    if (!musicOpen) {
+
+        container.style.display = "block";
+
+        player.src =
+            "https://www.youtube.com/embed/ImT4z4L4rvs?autoplay=1";
+
+        musicOpen = true;
+
+    } else {
+
+        player.src = "";
+        container.style.display = "none";
+
+        musicOpen = false;
+    }
+}
+</script>
 
 
+  
+<div id="music-player-container" style="display:none;">
 
+    <iframe
+        id="music-player"
+        width="0"
+        height="0"
+        src=""
+        allow="autoplay"
+        frameborder="0">
+    </iframe>
+
+</div>
   
 </body>
 </html>
