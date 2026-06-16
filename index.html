@@ -641,19 +641,100 @@ An overview of the activities that enriched the development of my skills
 </div>
 
  <!--===== taskbar? ========-->
-
-<div class="win98-taskbar">
-
-  <!-- START BUTTON -->
-  <div class="start-button">
-    <img src="https://i.redd.it/kksrotgwyya61.png" class="start-icon">
-    <span>Start</span>
-  </div>
-</div>
   
 </div> <!-- closes big blue-->
 
+<h1 id="projects">Projects</h1>
 
+<div class="page-spacer"></div>
+
+<p>
+A collection of technical projects and experiments built in HTML, Python, and scripting environments.
+</p>
+
+<div class="page-spacer"></div>
+
+<div class="projects-grid">
+
+    <!-- EXPLORER -->
+    <div class="project-window">
+
+        <div class="project-titlebar">
+
+            <div>Project Explorer</div>
+
+            <div class="project-controls">
+                <div class="project-btn">-</div>
+                <div class="project-btn">□</div>
+                <div class="project-btn">X</div>
+            </div>
+
+        </div>
+
+        <div class="project-explorer">
+
+            <div class="project-icon" onclick="loadProject('portfolio')">
+
+                <img src="https://win98icons.alexmeub.com/icons/png/directory_open_file_mydocs-0.png">
+
+                <div class="project-icon-name">
+                    Portfolio Site V1
+                </div>
+
+            </div>
+
+            <div class="project-icon" onclick="loadProject('ticketing')">
+
+                <img src="https://win98icons.alexmeub.com/icons/png/directory_open_file_mydocs-0.png">
+
+                <div class="project-icon-name">
+                    Concert Ticketing Software
+                </div>
+
+            </div>
+
+            <div class="project-icon" onclick="loadProject('vbs')">
+
+                <img src="https://win98icons.alexmeub.com/icons/png/directory_open_file_mydocs-0.png">
+
+                <div class="project-icon-name">
+                    VBS Script Program
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <!-- VIEWER -->
+    <div class="project-window">
+
+        <div class="project-titlebar">
+
+            <div id="project-title">
+                Select a Project
+            </div>
+
+            <div class="project-controls">
+                <div class="project-btn">-</div>
+                <div class="project-btn">□</div>
+                <div class="project-btn">X</div>
+            </div>
+
+        </div>
+
+        <div class="project-viewer" id="project-viewer">
+
+            <p>
+                Click an icon on the left to view project details.
+            </p>
+
+        </div>
+
+    </div>
+
+</div>
 
       
 
@@ -793,6 +874,86 @@ updateClock();
   </div>
 
 </div>
+
+
+
+
+  <!--===== projects ========-->
+
+<script>
+function loadProject(project) {
+
+    const title = document.getElementById("project-title");
+    const viewer = document.getElementById("project-viewer");
+
+    if (project === "portfolio") {
+
+        title.textContent = "Portfolio Site V1";
+
+        viewer.innerHTML = `
+            <h3>Portfolio Site V1</h3>
+
+            <p>
+                The first version of my portfolio website.
+                This project served as an early exploration of web development and user interface design.
+            </p>
+
+            <ul>
+                <li>Built using HTML, CSS, and JavaScript</li>
+                <li>Focused on creating a functional portfolio experience</li>
+                <li>Laid the foundation for future redesigns</li>
+            </ul>
+
+            <p>
+                Add screenshots, embeds, or a live demo here.
+            </p>
+        `;
+    }
+
+    else if (project === "ticketing") {
+
+        title.textContent = "Concert Ticketing Software";
+
+        viewer.innerHTML = `
+            <h3>Concert Ticketing Software</h3>
+
+            <ul>
+                <li>Built with Python</li>
+                <li>Focused on consumer preference</li>
+                <li>Codeveloped with a team of three</li>
+            </ul>
+
+            <iframe
+                src="https://trinket.io/python3/882edd72ff64"
+                title="Concert Ticketing Software">
+            </iframe>
+        `;
+    }
+
+    else if (project === "vbs") {
+
+        title.textContent = "VBS Script Program";
+
+        viewer.innerHTML = `
+            <h3>VBS Script Program</h3>
+
+            <ul>
+                <li>Built using VBScript in Notepad++</li>
+                <li>Designed to tell a story through lyrics</li>
+                <li>Created to accompany "Choice" by Jack Stauber</li>
+            </ul>
+
+            <video controls>
+                <source src="personalproject.mp4" type="video/mp4">
+            </video>
+        `;
+    }
+}
+</script>
+
+
+
+
   
 </body>
 </html>
