@@ -71,11 +71,11 @@
     </div>
 
     <div class="header-nav">
-        <a href="#about">About</a>
-        <a href="#experience">Work Experience</a>
-        <a href="#education">Education</a>
-        <a href="#extracurriculars">Extracurriculars</a>
-        <a href="#projects">Projects</a>
+        <a href="#about" class="badge hover-grow">About</a>
+        <a href="#experience" class="badge hover-grow">Work Experience</a>
+        <a href="#education" class="badge hover-grow">Education</a>
+        <a href="#extracurriculars" class="badge hover-grow">Extracurriculars</a>
+        <a href="#projects" class="badge hover-grow">Projects</a>
     </div>
 
 </div>
@@ -316,8 +316,38 @@
 </div>
 
 <!--========================================================
-    SPLASH TEXT SCRIPT (rotating minecraft-style text)
+    the extra fun not fun stuff (javascripts)
 ========================================================-->
+  
+<script>
+const roles = [
+    "I.T. Specialist",
+    "Computer Technician",
+    "Software Developer",
+    "Device Troubleshooter",
+    "Cyber Security Agent",
+    "Database Administrator",
+    "Network Engineer",
+    "Computer Scientist",
+];
+
+let roleIndex = 0;
+
+// grabs the text element from the page
+const roleElement = document.getElementById("role-text");
+
+// changes the role every time it runs
+function rotateRole() {
+    roleIndex = (roleIndex + 1) % roles.length;
+    roleElement.textContent = roles[roleIndex];
+}
+
+// switch roles every 2 seconds
+setInterval(rotateRole, 2000);
+</script>
+
+  
+<!--=====SPLASH TEXT SCRIPT (rotating minecraft-style text)========-->
 <script>
 
 const splashes = [
