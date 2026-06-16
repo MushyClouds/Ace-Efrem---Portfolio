@@ -223,6 +223,10 @@ html, body {
     align-items: start;
 }
 
+/* this was for the whole aspiring flippy text thing*/
+#role-text {
+    transition: opacity 0.2s ease;
+}
 
 /* =========================
    about cards
