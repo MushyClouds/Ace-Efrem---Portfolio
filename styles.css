@@ -795,7 +795,6 @@ body {
 WIN98 STYLE FRAME FOR MSPAINT BOXES
    ========================= */
 .paint-window {
-    width: 280px;
     display: flex;
     flex-direction: column;
 
@@ -944,7 +943,7 @@ WIN98 STYLE FRAME FOR MSPAINT BOXES
 .color:nth-child(16) { background: #ffffff; }
 
 
-.extracurriculars-wrapper {
+.extracurriculars-wrapper  .paint-window {
     display: flex;
     flex-direction: row;
     gap: 12px;
@@ -954,6 +953,9 @@ WIN98 STYLE FRAME FOR MSPAINT BOXES
     flex-wrap: nowrap; /* keeps them in one line */
     overflow-x: auto;  /* allows scroll if screen is too small */
     margin: 0 auto;    /* Centers the wrapper horizontally */
+
+    width: 280px;
+    flex: 0 0 auto;
 }
 
 /* optional: prevents shrinking */
@@ -967,11 +969,13 @@ WIN98 STYLE FRAME FOR MSPAINT BOXES
    ========================= */
 .projects-layout {
     display: grid;
-    grid-template-columns: 20% 80%;
+    grid-template-columns: 220px minmax(0, 1fr);
+
     gap: 12px;
+
+    width: 100%;
     align-items: start;
 }
-
 /* shared window style (you already mostly have this) */
 .paint-window {
     display: flex;
