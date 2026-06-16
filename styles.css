@@ -22,6 +22,17 @@ body {
     background-position: center;
 }
 
+.taskbar {
+  width: 100vh;
+  height: 100px;
+  background-color: #B4BAC0;
+  border: 2px solid #B4BAC0;
+  position: fixed;
+  bottom: 0;
+  z-index: 1000; /* Keeps it on top of other elements */
+   
+    margin-right: 6px;
+    background-image: url("https://i.redd.it/kksrotgwyya61.png");
 /* =========================
    DESKTOP WRAPPER
    ========================= */
