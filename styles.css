@@ -366,19 +366,25 @@ body {
         achievments and certs
    ========================= */
 
+/* ======BADGE GRID====== */
+
 .badge-grid {
     display: grid;
     grid-template-columns: 1fr;
-    gap: 8px;
+    gap: 10px;
 }
 
+/* ====BADGE CARD===== */
+
 .badge {
-    padding: 7px 9px;
+    width: 100%;
+    box-sizing: border-box;
+
+    padding: 12px 14px; /* bigger real size */
     display: flex;
     align-items: center;
     justify-content: space-between;
-
-    padding: 6px 8px;
+    gap: 10px;
 
     background: #ffffff;
 
@@ -386,26 +392,25 @@ body {
     border-left: 2px solid #ffffff;
     border-right: 2px solid #404040;
     border-bottom: 2px solid #404040;
-
-    transform: scale(1.33);
-    transform-origin: top left; /* keeps layout from drifting weirdly */
 }
 
-/* text stacked on left */
+/* =====TEXT (LEFT SIDE)====== */
+
 .badge-name {
-    font-size: 12px;
+    font-size: 13px;
     font-weight: bold;
 }
 
 .badge-meta {
-    font-size: 10px;
+    font-size: 11px;
     color: #333;
 }
 
-/* icon pinned to the right */
+/* ====ICON (RIGHT SIDE)======= */
+
 .badge-icon {
-    width: 24px;
-    height: 24px;
+    width: 26px;
+    height: 26px;
 
     object-fit: contain;
 
@@ -419,14 +424,6 @@ body {
     padding: 2px;
 
     image-rendering: pixelated;
-}
-/* text stacked neatly */
-.badge-name {
-    font-size: 12px;
-    font-weight: bold;
-}
 
-.badge-meta {
-    font-size: 10px;
-    color: #333;
+    margin-left: auto;
 }
