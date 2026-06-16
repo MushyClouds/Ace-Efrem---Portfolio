@@ -67,8 +67,8 @@ body {
     padding: 4px 8px;
 
     display: flex;
-    flex-direction: column; /* STACKS CONTENT */
-    align-items: left;
+    flex-direction: column;
+    align-items: flex-start;
 
     font-family: "Tahoma", sans-serif;
     font-size: 13px;
@@ -146,7 +146,10 @@ body {
     white-space: nowrap;
 
     animation: splashPulse 2s infinite ease-in-out;
+
+    margin-left: auto;
 }
+
 
 @keyframes splashPulse {
     0%   { transform: scale(1) rotate(10deg); } /*start anim */
@@ -154,12 +157,7 @@ body {
     100% { transform: scale(1) rotate(10deg); }
 }
 
-.title-top {
-    display: flex;
-    justify-content: space-between;
-    width: 100%;
-    align-items: center;
-}
+
 
 /* right side group */
 .title-right {
@@ -169,18 +167,6 @@ body {
     margin-left: auto;
 }
 
-/* forces it right */
-.splash-text {
-    color: yellow;
-    font-family: "Comic Sans MS", cursive;
-    font-size: 14px;
-
-    transform: rotate(10deg);
-    white-space: nowrap;
-
-    animation: splashPulse 2s infinite ease-in-out;
-    margin-left: auto;
-}
 
 /* =========================
    TAB BAR
