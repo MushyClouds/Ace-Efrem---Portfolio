@@ -1,57 +1,75 @@
 /* =========================
-   OUTSIDE DEKSTOP WINDOW
+   BASE RESET
    ========================= */
 
-.desktop-background {
-    position: fixed;
-    inset: 0;
-
-    background-image: url("https://cdn.mos.cms.futurecdn.net/muYtdjidKSRdUw3aBcSa83.png");
-
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-
-    z-index: -1;
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
 /* =========================
-   INSIDE DEKSTOP WINDOW
+   DESKTOP BACKGROUND
    ========================= */
 
 body {
-    margin: 0;
-    background: #c0c0c0; /* classic old desktop grey */
+    height: 100vh;
     font-family: "Courier New", monospace;
+    overflow: hidden;
+
+    background-image: url("https://cdn.mos.cms.futurecdn.net/muYtdjidKSRdUw3aBcSa83.png");
+    background-size: cover;
+    background-position: center;
 }
 
-/* fake desktop background layer */
+/* =========================
+   DESKTOP WRAPPER
+   ========================= */
+
 .desktop {
+    width: 100%;
     height: 100vh;
+
     display: flex;
     align-items: center;
     justify-content: center;
 }
 
-/* the “program window” */
+/* =========================
+   APP WINDOW (MYSPACE MOCK)
+   ========================= */
+
 .app-window {
     width: 1100px;
     height: 85vh;
-    border: 4px solid #000;
+
+    border: 3px solid #000;
     background: #ffffff;
+
     display: flex;
     flex-direction: column;
-    box-shadow: 8px 8px 0px #000;
+
+    box-shadow: 10px 10px 0px #000;
 }
 
-/* fake title bar like old OS */
+/* =========================
+   TITLE BAR (OLD OS STYLE)
+   ========================= */
+
 .title-bar {
-    background: linear-gradient(to right, #000080, #1e90ff);
-    color: white;
-    padding: 6px 10px;
+    background: #1a1a1a;
+    color: #fff;
+
+    padding: 8px 10px;
+
     display: flex;
     align-items: center;
     justify-content: space-between;
+}
+
+.title-text {
+    font-size: 14px;
+    letter-spacing: 1px;
 }
 
 /* fake window buttons */
@@ -64,30 +82,43 @@ body {
     width: 12px;
     height: 12px;
     border-radius: 50%;
-    display: inline-block;
 }
 
 .red { background: #ff5f57; }
 .yellow { background: #ffbd2e; }
 .green { background: #28c840; }
 
-/* title text */
-.title-text {
-    font-size: 14px;
-    letter-spacing: 1px;
-}
+/* =========================
+   SCROLLABLE CONTENT AREA
+   ========================= */
 
-/* fake “scroll area” */
 .app-content {
     flex: 1;
     overflow-y: auto;
     padding: 20px;
 
-    /* old embedded UI? */
-    background-image: repeating-linear-gradient(
-        0deg,
-        #ffffff,
-        #ffffff 24px,
-        #f3f3f3 25px
-    );
+    background: #f5f5f5;
+}
+
+/* fake scrollbar (nOice) */
+.app-content::-webkit-scrollbar {
+    width: 12px;
+}
+
+.app-content::-webkit-scrollbar-track {
+    background: #ddd;
+}
+
+.app-content::-webkit-scrollbar-thumb {
+    background: #888;
+}
+
+/* =========================
+   PLACEHOLDER CONTENT
+   ========================= */
+
+.placeholder {
+    background: white;
+    border: 2px solid #000;
+    padding: 20px;
 }
