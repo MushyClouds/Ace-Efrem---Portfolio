@@ -444,6 +444,8 @@ An overview of the activities that enriched the development of my skills
 
 <div class="extracurriculars-wrapper">
 
+<div class="extracurriculars-wrapper">
+
   <!-- ===================== WINDOW 1 ===================== -->
 <div class="hover-grow">  
 <div class="paint-window">
@@ -651,83 +653,9 @@ An overview of the activities that enriched the development of my skills
   
 </div> <!-- closes big blue-->
 
-<!--========================================================
-    projects
-========================================================-->
 
-<h1 id="projects">Projects</h1>
 
-<div class="page-spacer"></div>
-
-<p>
-A collection of technical projects and experiments built in HTML, Python, and scripting environments.
-</p>
-
-<div class="page-spacer"></div>
-
-<div class="projects-layout">
-
-  <!-- ================= LEFT WINDOW (ICON SELECTOR) ================= -->
-  <div class="paint-window project-sidebar">
-
-    <div class="paint-titlebar">
-      <div class="paint-title">Project Explorer</div>
-
-      <div class="window-controls">
-        <div class="btn">-</div>
-        <div class="btn">□</div>
-        <div class="btn">X</div>
-      </div>
-    </div>
-
-    <div class="paint-content icon-grid">
-
-      <!-- ICON 1 -->
-      <div class="project-icon" onclick="loadProject('portfolio')">
-        <img src="https://win98icons.alexmeub.com/icons/png/directory_open_file_mydocs-0.png">
-        <div>Portfolio Site V1</div>
-      </div>
-
-      <!-- ICON 2 -->
-      <div class="project-icon" onclick="loadProject('ticketing')">
-        <img src="https://win98icons.alexmeub.com/icons/png/directory_open_file_mydocs-0.png">
-        <div>Concert Ticketing Software</div>
-      </div>
-
-      <!-- ICON 3 -->
-      <div class="project-icon" onclick="loadProject('vbs')">
-        <img src="https://win98icons.alexmeub.com/icons/png/directory_open_file_mydocs-0.png">
-        <div>VBS Script Program</div>
-      </div>
-
-    </div>
-
-  </div>
-
-  <!-- ================= RIGHT WINDOW (VIEWER PANE) ================= -->
-  <div class="paint-window project-main">
-
-    <div class="paint-titlebar">
-      <div class="paint-title" id="project-title">Select a Project</div>
-
-      <div class="window-controls">
-        <div class="btn">-</div>
-        <div class="btn">□</div>
-        <div class="btn">X</div>
-      </div>
-    </div>
-
-    <div class="paint-content" id="project-viewer">
-
-      <p>
-        Click an icon on the left to view project details.
-      </p>
-
-    </div>
-
-  </div>
-
-</div>      
+      
 
       
 
@@ -782,7 +710,7 @@ setInterval(rotateRole, 2000);
 const splashes = [
 
     // list of minecrafty rotating phrases
-    "Over 2100+ lines of code!",
+    "Over 1000 lines of code!",
     "Inspired by Win98",
     "Try clicking random things",
     "Don't close the tab",
@@ -865,63 +793,6 @@ updateClock();
   </div>
 
 </div>
-
-  <!--===== projects page ========-->
-
-<script>
-function loadProject(project) {
-
-    const title = document.getElementById("project-title");
-    const viewer = document.getElementById("project-viewer");
-
-    if (project === "portfolio") {
-        title.textContent = "Portfolio Site V1";
-
-        viewer.innerHTML = `
-            <h3>Portfolio Site V1</h3>
-            <p>This is the first iteration of my portfolio site, which I remade to show my skills.</p>
-
-            <ul>
-                <li>Built with HTML, CSS, JavaScript</li>
-                <li>Focused on simple UI</li>
-                <li>Includes interactive UI components</li>
-            </ul>
-
-            <iframe src="https://2743973.playcode.io" title="Archstone 2026 Portfolio" width="100%" height="500px"></iframe>
-        `;
-    }
-
-    else if (project === "ticketing") {
-        title.textContent = "Concert Ticketing Software";
-
-        viewer.innerHTML = `
-            <h3>Concert Ticketing Software</h3>
-            <ul>
-                <li>Built with Python</li>
-                <li>Focused on consumer preference</li>
-                <li>Codeveloped with a team of three.</li>
-            </ul>
-            <iframe src="https://trinket.io/python3/882edd72ff64" title="AP Comp Sci Prin Final" width="100%" height="500px"></iframe>
-        `;
-    }
-
-    else if (project === "vbs") {
-        title.textContent = "VBS Script Program";
-
-        viewer.innerHTML = `
-            <h3>VBS Script Program</h3>
-            <ul>
-                <li>Built with VBS Script on Notepad++</li>
-                <li>Designed to tell a story through lyrics</li>
-                <li>Program pairs with the song "Choice" by Jack Stauber</li>
-            </ul>
-            <video width="100%" height="500" controls>
-              <source src="personalproject.mp4" type="video/mp4"></video>
-        `;
-    }
-}
-</script>
-
   
 </body>
 </html>
