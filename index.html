@@ -647,7 +647,7 @@ An overview of the activities that enriched the development of my skills
     </div>
 
 
-<div class="taskbar"></div>
+<!-- taskbar here? -->
   
   </div>
 
@@ -720,5 +720,56 @@ setInterval(rotateSplash, 3000);
 
 </script>
 
+
+
+<!--====== Working Clock =======-->
+
+<script>
+function updateClock() {
+    const now = new Date();
+    let hours = now.getHours();
+    let minutes = now.getMinutes();
+
+    let ampm = hours >= 12 ? "PM" : "AM";
+    hours = hours % 12;
+    hours = hours ? hours : 12;
+
+    minutes = minutes.toString().padStart(2, "0");
+
+    document.getElementById("clock").textContent =
+        hours + ":" + minutes + " " + ampm;
+}
+
+setInterval(updateClock, 1000);
+updateClock();
+</script>
+
+
+
+  
+
+  <!--===== taskbar? ========-->
+
+<div class="win98-taskbar">
+
+  <!-- START BUTTON -->
+  <div class="start-button">
+    <img src="https://i.redd.it/kksrotgwyya61.png" class="start-icon">
+    <span>Start</span>
+  </div>
+
+  <!-- OPEN APPS AREA -->
+  <div class="taskbar-apps">
+    <div class="taskbar-app">Portfolio Terminal</div>
+    <div class="taskbar-app">MySpace Profile</div>
+  </div>
+
+  <!-- CLOCK -->
+  <div class="taskbar-clock" id="clock">
+    12:00 PM
+  </div>
+
+</div>
+  
 </body>
 </html>
