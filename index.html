@@ -1,495 +1,57 @@
 <!DOCTYPE html>
-<!-- Professional MySpace Edition -->
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <title>Ace Efrem - Portfolio</title>
-
-    <!-- links CSS file -->
-    <link rel="stylesheet" href="styles.css">
-
-    <style>
-        body {
-            font-family: Courier, monospace;
-        }
-    </style>
 </head>
-
 <body>
 
-<!-- BIG OL HEADER BABY (myspace edition) -->
-<header class="site-header">
+<div class="desktop">
 
-    <!-- site name = top identity panel -->
-    <div class="site-name">
-        <a href="#">Ace Efrem</a>
-    </div>
+    <!-- fake desktop background layer -->
+    <div class="desktop-background"></div>
 
-    <!-- navigation = chunky old internet tabs -->
-    <nav class="site-navigation">
-        <ul>
-            <li class="grow-element"><a href="#about">About Me</a></li>
-            <li class="grow-element"><a href="#experience">Work Experience</a></li>
-            <li class="grow-element"><a href="#education">Education</a></li>
-            <li class="grow-element"><a href="#extracurriculars">Extracurriculars</a></li>
-            <li class="grow-element"><a href="#projects">Projects</a></li>
-            <li class="grow-element"><a href="#contact">Contact Me</a></li>
-        </ul>
-    </nav>
+    <!-- THE APP WINDOW -->
+    <div class="app-window">
 
-</header>
+        <!-- top bar (classic OS) -->
+        <div class="title-bar">
 
-<!-- MUSIC DOCK (JoelGC-style bottom bar will live in CSS + JS later) -->
-
-<div class="site">
-
-<!-- =========================
-     ABOUT ME SECTION
-     ========================= -->
-
-<div class="about-me-page" id="about">
-
-    <!-- LEFT SIDE: profile identity panel -->
-    <div class="profile-card">
-
-        <h1>About Me</h1>
-
-        <!-- spacer -->
-        <div class="page-spacer"></div>
-
-        <!-- ROTATING TITLE ZONE -->
-        <p>
-            Aspiring <span id="role-text">I.T. Specialist</span>
-        </p>
-
-        <!-- profile image zone -->
-        <div class="grow-element">
-
-            <div class="page-spacer"></div>
-
-            <img src="profilepic.png"
-                 alt="Hello! This is me! Hi!!"
-                 width="325"
-                 height="400">
-
-        </div>
-
-    </div>
-
-    <!-- RIGHT SIDE: certifications + achievements grid -->
-    <div class="certifications-achievements-card">
-
-        <!-- certificate grid -->
-        <div class="cert-grid">
-
-            <div class="grow-element">
-                <div class="cert-card">
-                    <h4>CERTIFICATION</h4>
-                    <h3>OSHA Certified</h3>
-                    <p>Arlington Career Centre<br>2025–2026</p>
-                </div>
+            <div class="title-buttons">
+                <span class="dot red"></span>
+                <span class="dot yellow"></span>
+                <span class="dot green"></span>
             </div>
 
-            <div class="grow-element">
-                <div class="cert-card">
-                    <h4>CERTIFICATION</h4>
-                    <h3>CPR Trained</h3>
-                    <p>Washington Liberty HS<br>2024–2025</p>
-                </div>
-            </div>
-
-            <div class="grow-element">
-                <div class="cert-card">
-                    <h4>CERTIFICATION</h4>
-                    <h3>Python Certification</h3>
-                    <p>Washington Liberty HS<br>2024–2025</p>
-                </div>
-            </div>
-
-            <!-- GIF PANEL REPLACEMENT ZONE -->
-            <!-- this replaces the weird card (now becomes a static gif) -->
-
-            <div class="grow-element">
-                <div class="gif-panel">
-
-                    <!-- swap this file later -->
-                    <img src="static.gif" alt="static">
-
-                </div>
-            </div>
-
-            <div class="grow-element">
-                <div class="cert-card">
-                    <h4>ACHIEVEMENT</h4>
-                    <h3>Straight A’s</h3>
-                    <p>Washington Liberty HS<br>2023–2024</p>
-                </div>
-            </div>
-
-            <div class="grow-element">
-                <div class="cert-card">
-                    <h4>ACHIEVEMENT</h4>
-                    <h3>Student of the Semester</h3>
-                    <p>Washington Liberty HS<br>2023–2024</p>
-                </div>
-            </div>
-
-            <div class="grow-element">
-                <div class="cert-card">
-                    <h4>ACHIEVEMENT</h4>
-                    <h3>Honour Roll Award</h3>
-                    <p>Washington Liberty HS<br>2023–2024</p>
-                </div>
-            </div>
-
-            <div class="grow-element">
-                <div class="cert-card">
-                    <h4>ACHIEVEMENT</h4>
-                    <h3>Workplace Readiness</h3>
-                    <p>Washington Liberty HS<br>2023–2024</p>
-                </div>
-            </div>
-
-            <!-- SECOND GIF PANEL SLOT -->
-            <div class="grow-element">
-                <div class="gif-panel">
-
-                    <!-- swap this file later -->
-                    <img src="static.gif" alt="static">
-
-                </div>
+            <div class="title-text">
+                Ace Efrem - MySpace Terminal
             </div>
 
         </div>
-    </div>
 
-    <!-- BOTTOM BIO STRIP (stretches across page) -->
-    <div class="about-bio-card">
+        <!-- THIS is your scroll container -->
+        <div class="app-content">
 
-        <center>
+            <!-- HEADER (we move your site header later) -->
+            <header class="site-header">
+                <div class="site-name">Ace Efrem</div>
+            </header>
 
-            <p>
-                Hello! I am someone who likes to see how things work inside and out, especially in technology.
-                Through this, I've built experience in hardware and software troubleshooting, system setup,
-                and technical support in various environments. I'm comfortable using Python, HTML, CSS, Javascript,
-                and I'm still learning so much more.
-                <br><br>
-                Fun Fact: This website was programmed by me!
-            </p>
+            <!-- EVERYTHING ELSE GOES HERE -->
+            <main class="site">
 
-        </center>
+                <section class="page-placeholder">
+                    <h1>Loading profile...</h1>
+                    <p>Welcome back in time</p>
+                </section>
+
+            </main>
+
+        </div>
 
     </div>
 
 </div>
-
-
-<!-- =========================
-     WORK EXPERIENCE
-     ========================= -->
-
-<div class="work-experience-page" id="experience">
-
-    <center>
-        <h1>Work Experience</h1>
-
-        <div class="page-spacer"></div>
-
-        <p>An overview of the hands-on experience I've gained in the I.T. department through shadowing experienced I.T. professionals</p>
-
-    </center>
-
-    <div class="page-spacer"></div>
-
-    <!-- layout grid (2 columns) -->
-    <div class="experience-layout">
-
-        <!-- LEFT COLUMN -->
-        <div class="experience-column">
-
-            <div class="grow-element">
-                <div class="experience-card">
-
-                    <div class="experience-row reverse">
-
-                        <img class="job-image"
-                             src="https://lh3.googleusercontent.com/gps-cs-s/APNQkAHrfGuc3rjFXLOzbYHTxvwANOjrqScXpKCtQ3T4yIFuxZBg8pDXv8X3acD-rZT49anO9eAlP3VvMkEzqGQzCDbPu-r8zEJsvQJyUxveW0JRK5LFFDLlKY24M4gsBQD1Uc8omsILxQ=w408-h306-k-no"
-                             alt="AAAE">
-
-                        <div class="job-text">
-
-                            <h3>AAAE - American Association of Airport Executives</h3>
-                            <p>601 Madison St STE 400, Alexandria, VA 22314</p>
-
-                            <div class="page-spacer"></div>
-
-                            <p>
-                                Shadowed IT professionals in resolving help desk tickets and diagnosing hardware failures.
-                                Assisted in deploying and imaging workstations.
-                            </p>
-
-                        </div>
-                    </div>
-
-                </div>
-            </div>
-
-        </div>
-
-        <!-- RIGHT COLUMN -->
-        <div class="experience-column">
-
-            <div class="grow-element">
-                <div class="experience-card">
-
-                    <div class="experience-row">
-
-                        <img class="job-image"
-                             src="https://lh3.googleusercontent.com/gps-cs-s/APNQkAFZkC1lmRBHVRMsSaJelCBDUh91mFRVYvau74V-RbAzczZGinzngiwYWvhH-EdlW3BI4nZXiBV00uhCdd0HuIeSFamgOf4FXmVTMyQLT-8kl6HrzZD5tiv9jOdaDaGSUvs3wBaJRw=w408-h306-k-no"
-                             alt="MOSAIC">
-
-                        <div class="job-text">
-
-                            <h3>MOSAIC - Commercial Printing</h3>
-                            <p>4801 View Point Pl, Hyattsville, MD 20781</p>
-
-                            <div class="page-spacer"></div>
-
-                            <p>
-                                Shadowed IT professionals in diagnosing hardware failures and configuring software.
-                                Observed network troubleshooting and system maintenance.
-                            </p>
-
-                        </div>
-                    </div>
-
-                </div>
-            </div>
-
-        </div>
-    </div>
-
-    <!-- SKILLS TOOLBOX -->
-    <div class="grow-element">
-        <div class="toolbox-card">
-
-            <h3>Skillsets</h3>
-
-            <div class="page-spacer"></div>
-
-            <h4>Technical Skills</h4>
-
-            <div class="skill">
-                <p>Programming</p>
-                <div class="skill-bar"><div class="skill-fill skill-4"></div></div>
-            </div>
-
-            <div class="skill">
-                <p>Windows Systems</p>
-                <div class="skill-bar"><div class="skill-fill skill-5"></div></div>
-            </div>
-
-            <div class="skill">
-                <p>Hardware & Software Troubleshooting</p>
-                <div class="skill-bar"><div class="skill-fill skill-4"></div></div>
-            </div>
-
-            <div class="skill">
-                <p>Microsoft Office</p>
-                <div class="skill-bar"><div class="skill-fill skill-3"></div></div>
-            </div>
-
-            <div class="skill">
-                <p>Typing Speed (102 WPM)</p>
-                <div class="skill-bar"><div class="skill-fill skill-4"></div></div>
-            </div>
-
-            <div class="page-spacer"></div>
-
-            <h4>Professional Skills</h4>
-
-            <div class="skill">
-                <p>Problem Solving</p>
-                <div class="skill-bar"><div class="skill-fill skill-4"></div></div>
-            </div>
-
-            <div class="skill">
-                <p>Analytical Thinking</p>
-                <div class="skill-bar"><div class="skill-fill skill-5"></div></div>
-            </div>
-
-            <div class="skill">
-                <p>Time Management</p>
-                <div class="skill-bar"><div class="skill-fill skill-3"></div></div>
-            </div>
-
-            <div class="skill">
-                <p>Adaptability</p>
-                <div class="skill-bar"><div class="skill-fill skill-5"></div></div>
-            </div>
-
-        </div>
-    </div>
-</div>
-
-
-<!-- =========================
-     EDUCATION
-     ========================= -->
-
-<div class="academics-page" id="education">
-
-    <center>
-        <h1>Education</h1>
-
-        <div class="page-spacer"></div>
-
-        <p>
-            A snapshot of the education that shaped my technical and professional growth
-        </p>
-    </center>
-
-    <div class="page-spacer"></div>
-
-    <!-- SCHOOL 1 -->
-    <div class="grow-element">
-        <div class="academics-card">
-
-            <h3>Arlington Career Centre 2025-2027</h3>
-            <p>816 S Walter Reed Dr, Arlington, VA 22204</p>
-
-            <div class="page-spacer"></div>
-
-            <div class="course-card">
-
-                <h4>Electricity I 2025-2026</h4>
-
-                <ul style="list-style-type: square;">
-                    <li>Wired functional electrical outlets & light switches</li>
-                    <li>Assembled parallel and series electrical circuits</li>
-                    <li>Demonstrated proficiency in circuit wiring techniques</li>
-                </ul>
-
-            </div>
-        </div>
-    </div>
-
-    <!-- SCHOOL 2 -->
-    <div class="grow-element">
-        <div class="academics-card">
-
-            <h3>Washington Liberty 2023-2025</h3>
-            <p>1301 N Stafford St, Arlington, VA 22201</p>
-
-            <div class="page-spacer"></div>
-
-            <div class="course-card">
-
-                <h4>AP Computer Science Principles 2024-2025</h4>
-
-                <ul style="list-style-type: square;">
-                    <li>Developed software for purchasing concert tickets using Python code</li>
-                    <li>Developed websites using HTML code</li>
-                    <li>Programmed a calculator using Python & CSS code</li>
-                    <li>Honed skills in Java programming</li>
-                </ul>
-
-            </div>
-
-            <div class="course-card">
-
-                <h4>Computer Sciences 2023-2024</h4>
-
-                <ul style="list-style-type: square;">
-                    <li>Honed skills in HTML programming</li>
-                    <li>Honed skills in Python programming</li>
-                    <li>Conducted program debugging and troubleshooting</li>
-                </ul>
-
-            </div>
-
-        </div>
-    </div>
-
-</div>
-
-<!-- =========================
-   MUSIC PLAYER (BOTTOM BAR - FIXED)
-   ========================= -->
-
-<!-- YouTube API -->
-<script src="https://www.youtube.com/iframe_api"></script>
-<!-- hidden player (required by API) -->
-<div id="music-player" style="display:none;"></div>
-
-<!-- bottom dock music bar -->
-<div class="music-dock">
-    <button onclick="playMusic()" class="dock-btn">▶</button>
-    <button onclick="pauseMusic()" class="dock-btn">⏸</button>
-    <a href="https://www.youtube.com/watch?v=vGxHVf6RTVY" target="_blank" class="dock-btn">🔗</a>
-</div>
-
-<script>
-let player;
-let isReady = false;
-
-/* youtube player */
-function onYouTubeIframeAPIReady() {
-    player = new YT.Player('music-player', {
-        height: '0',
-        width: '0',
-        videoId: 'vGxHVf6RTVY',
-        playerVars: {
-            autoplay: 1,
-            mute: 0
-        },
-        events: {
-            onReady: () => {
-                isReady = true;
-            }
-        }
-    });
-}
-/* saftey is to get around general site perms becus this is like, virus behaviour or sum */
-/* safety play */
-function playMusic() {
-    if (isReady) player.playVideo();
-}
-
-/* safety pause */
-function pauseMusic() {
-    if (isReady) player.pauseVideo();
-}
-
-/* force page start at top (anti-scroll bug fix) */
-window.onload = function () {
-    window.scrollTo(0, 0);
-};
-</script>
-
-<!-- =========================
-   ROTATING ROLE TEXT
-   ========================= -->
-
-<script>
-const roles = [
-    "I.T. Specialist",
-    "Computer Technician",
-    "Software Developer",
-    "Device Troubleshooter",
-    "Cyber Security Agent",
-    "Network Engineer",
-    "Computer Scientist"
-];
-
-let i = 0;
-const roleText = document.getElementById("role-text");
-
-setInterval(() => {
-    i = (i + 1) % roles.length;
-    roleText.textContent = roles[i];
-}, 2000);
-</script>
 
 </body>
 </html>
