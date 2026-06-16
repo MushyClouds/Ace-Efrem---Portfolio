@@ -6,139 +6,139 @@
 
 <!-- THIS IS REQUIRED OR NOTHING WORKS, DON'T FORGET!!! -->
 <link rel="stylesheet" href="styles.css">
-
 </head>
 
 <body>
 
 <div class="desktop">
 
-  <!-- =====================================================
-       this is everything (whole fake OS box)
-  ====================================================== -->
+  <!--===this is everything (whole fake OS box)===-->
   <div class="app-window">
 
-    <!-- =====================================================
-         WIN98 TITLE BAR
-    ====================================================== -->
+    <!--=====================================================
+        WIN98 TITLE BAR
+    =====================================================-->
     <div class="title-bar">
 
+      <!-- LEFT SIDE -->
+      <div class="title-left">
+
         <div class="title-text">
-            Ace Efrem — Portfolio Terminal
+          Ace Efrem — Portfolio Terminal
         </div>
 
-        <!-- window buttons (min/max/close) -->
-        <div class="window-controls">
-            <div class="btn minimize"></div>
-            <div class="btn maximize"></div>
-            <div class="btn close">X</div>
+        <!-- nav -->
+        <div class="header-nav">
+          <a href="#about">About</a>
+          <a href="#experience">Work</a>
+          <a href="#education">Education</a>
+          <a href="#extracurriculars">Extracurriculars</a>
+          <a href="#projects">Projects</a>
         </div>
 
-    </div>
+      </div>
 
-
-    <!-- =====================================================
-         FAKE BROWSER TAB BAR (nothing goes here)
-    ====================================================== -->
-    <div class="browser-bar">
-
-        <div class="tab active">
-            Ace Efrem - Profile
-        </div>
-
-        <div class="tab">
-            New Tab
-        </div>
-
-    </div>
-
-
-    <!-- =====================================================
-         MAIN CONTENT AREA (everything scrolls inside here)
-    ====================================================== -->
-    <div class="app-content">
-
-        <div class="myspace-container">
-
-            <!-- =================================================
-                        MYSPACE HEADER (blue site header)
-            ================================================== -->
-            <div class="myspace-header">
-
-                <div class="myspace-title">
-                    Ace Efrem
-                </div>
-
-                <div class="myspace-subtitle">
-                    Aspiring <span id="role-text">I.T. Specialist</span>
-                </div>
+      <!-- RIGHT SIDE -->
+      <div class="title-right">
 
         <!-- minecraft-style rotating splash text -->
-        <div align="right" id="splash-text" class="splash-text">
-            loading...
+        <div id="splash-text" class="splash-text">loading...</div>
+
+        <!-- window controls -->
+        <div class="window-controls">
+          <div class="btn minimize"></div>
+          <div class="btn maximize"></div>
+          <div class="btn close">X</div>
         </div>
-              
-        <!-- nav -->
-        <center>
-        <div class="header-nav">
-            <a href="#about">About</a>
-            <a href="#experience">Work</a>
-            <a href="#education">Education</a>
-            <a href="#extracurriculars">Extracurriculars</a>
-            <a href="#projects">Projects</a>
+
+      </div>
+
+    </div>
+
+    <!--=====================================================
+        FAKE BROWSER TAB BAR
+    =====================================================-->
+    <div class="browser-bar">
+
+      <div class="tab active">
+        Ace Efrem - Profile
+      </div>
+
+      <div class="tab">
+        New Tab
+      </div>
+
+    </div>
+
+    <!--=====================================================
+        MAIN CONTENT AREA (everything scrolls inside here)
+    =====================================================-->
+    <div class="app-content">
+
+      <div class="myspace-container">
+
+        <!--=================================================
+            MYSPACE HEADER (blue site header)
+        =================================================-->
+        <div class="myspace-header">
+
+          <div class="myspace-title">
+            Ace Efrem
+          </div>
+
+          <div class="myspace-subtitle">
+            Aspiring <span id="role-text">I.T. Specialist</span>
+          </div>
+
         </div>
-        </center>
-              
+
+        <!--=================================================
+            MAIN LAYOUT
+        =================================================-->
+        <div class="myspace-layout">
+
+          <div class="left-column">
+
+            <!-- PROFILE MODULE -->
+            <div class="profile-module">
+
+              <!-- profile title -->
+              <div class="profile-name">
+                About Me
+              </div>
+
+              <!-- SPACER (REUSABLE BLOCK) -->
+              <div class="spacer"></div>
+
+              <!-- PROFILE IMAGE -->
+              <img class="profile-pic" src="profilepic.png" alt="profile picture">
+
+              <!-- SPACER -->
+              <div class="spacer"></div>
+
+              <!-- SHORT BIO -->
+              <div class="profile-bio">
+                I like figuring out how things work on the inside, especially computers, hardware, and software.
+              </div>
+
+              <div class="spacer"></div>
+
+              <!-- CONTACT BUTTON -->
+              <a class="contact-btn" href="#contact">
+                Contact
+              </a>
+
             </div>
 
-            <!-- =================================================
-            GRID LAYOUT 4 ABOUT ME PAGE (prof left / content right)
-            ================================================== -->
-            <div class="myspace-layout">
+          </div>
 
-                <!-- LEFT PROFILE PANEL -->
-                <div class="left-column">
-
-                    <!-- profile module container -->
-                    <div class="profile-module">
-
-                        <!-- profile title -->
-                        <div class="profile-name">
-                            About Me
-                        </div>
-
-                        <!-- reusable spacer block (copy this whenever needed) -->
-                        <div class="spacer"></div>
-
-                        <!-- profile image -->
-                        <img class="profile-pic" src="profilepic.png" alt="profile picture">
-
-                        <div class="spacer"></div>
-
-                        <!-- short bio text -->
-                        <div class="profile-bio">
-                            I like figuring out how things work on the inside, especially computers, hardware, and software.
-                        </div>
-
-                        <div class="spacer"></div>
-
-                        <!-- contact button -->
-                        <a class="contact-btn" href="#contact">
-                            Contact
-                        </a>
-
-                    </div>
-
-                </div>
-
-                <!-- RIGHT CONTENT PANEL -->
-                <div class="right-column">
-                    MAIN CONTENT
-                </div>
-
-            </div>
+          <div class="right-column">
+            MAIN CONTENT
+          </div>
 
         </div>
+
+      </div>
 
     </div>
 
@@ -146,13 +146,14 @@
 
 </div>
 
-
-<!-- =========================================================
-     SPLASH TEXT SCRIPT (rotating minecraft-style text)
-========================================================= -->
+<!--========================================================
+    SPLASH TEXT SCRIPT (rotating minecraft-style text)
+========================================================-->
 <script>
 
 const splashes = [
+
+    // list of minecrafty rotating phrases
     "Over 1000 lines of code!",
     "Inspired by Win98",
     "Try clicking random things",
@@ -161,16 +162,16 @@ const splashes = [
     "This took awhile..."
 ];
 
-let i = 0; // counter for which splash is showing
-const splash = document.getElementById("splash-text");
+let i = 0; // "i" is a counter relating to which phrase is currently in play
 
-// changes splash text
-function rotateSplash() {
-    i = (i + 1) % splashes.length;
-    splash.textContent = splashes[i];
+const splash = document.getElementById("splash-text"); // grabs splash text element
+
+function rotateSplash() { // changes the text everytime it runs
+    i = (i + 1) % splashes.length; // move to next item in list
+    splash.textContent = splashes[i]; // replace the text on the page
 }
 
-// runs every 2 seconds
+// lowkey havent used JS since elementary school this was hard
 setInterval(rotateSplash, 2000);
 
 </script>
