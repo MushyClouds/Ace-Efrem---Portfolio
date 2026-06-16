@@ -427,3 +427,91 @@ body {
 
     margin-left: auto;
 }
+
+
+
+/* =========================
+   work experience
+   ========================= */
+
+.experience-layout {
+    display: grid;
+    grid-template-columns: 66% 34%;
+    gap: 12px;
+}
+
+/* LEFT SIDE */
+.experience-left {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+/* JOB CARDS */
+.experience-card {
+    display: flex;
+    gap: 12px;
+
+    background: #ffffff;
+    border-top: 2px solid #ffffff;
+    border-left: 2px solid #ffffff;
+    border-right: 2px solid #404040;
+    border-bottom: 2px solid #404040;
+
+    padding: 10px;
+}
+
+/* IMAGE INSIDE JOB */
+.job-image {
+    width: 120px;
+    height: 90px;
+    object-fit: cover;
+
+    border: 2px solid #808080;
+}
+
+/* RIGHT SIDE SKILLS PANEL */
+.experience-right {
+    background: #e6e6e6;
+
+    border-top: 2px solid #ffffff;
+    border-left: 2px solid #ffffff;
+    border-right: 2px solid #404040;
+    border-bottom: 2px solid #404040;
+
+    padding: 10px;
+    height: fit-content;
+    position: sticky;
+    top: 10px;
+}
+
+/* SKILL BARS */
+
+.skills-panel h2 {
+    font-family: Tahoma;
+    font-size: 16px;
+    margin-bottom: 10px;
+    border-bottom: 2px solid #808080;
+    padding-bottom: 4px;
+}
+
+.skill {
+    margin-bottom: 10px;
+}
+
+.bar {
+    width: 100%;
+    height: 10px;
+    background: #c0c0c0;
+
+    border: 2px inset #aaa;
+}
+
+.fill {
+    height: 100%;
+    background: #003399;
+}
+
+.fill-3 { width: 60%; }
+.fill-4 { width: 75%; }
+.fill-5 { width: 90%; }
