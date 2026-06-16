@@ -539,7 +539,7 @@ body {
 
 
 /* =========================
-   WINDOWS 98 STICKY NOTES
+   EDUCATION STICKYNOTES
    ========================= */
 
 .sticky-board {
@@ -549,53 +549,62 @@ body {
     margin-top: 10px;
 }
 
-/* ===MAIN WINDOW BODY=== */
+/* ====WINDOW FRAME======== */
 .sticky-window {
     background: #FFFF00;
 
-    border-top: 2px solid #ffffff;
-    border-left: 2px solid #ffffff;
-    border-right: 2px solid #808080;
-    border-bottom: 2px solid #404040;
+    border-top: 3px solid #ffffff;
+    border-left: 3px solid #ffffff;
+    border-right: 3px solid #808080;
+    border-bottom: 3px solid #404040;
 
     min-height: 260px;
+
     display: flex;
     flex-direction: column;
 
-    /* soft floating shadow */
-    box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.25);
+    box-shadow: 2px 2px 0 #b3b3b3;
 
     transition: transform 0.15s ease, box-shadow 0.15s ease;
 }
 
-/* hover lift (feels like a real window rising) */
+/* hover lift */
 .sticky-window:hover {
     transform: translateY(-3px);
 
-    box-shadow:
-        6px 6px 14px rgba(0, 0, 0, 0.35);
+    box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.25);
 }
 
-/* ====TITLE BAR (WIN98 STYLE)===== */
+/* ===TITLE BAR CONTROLS ONLY========= */
+.sticky-titlebar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    padding: 5px 8px;
+
+    font-family: Tahoma, sans-serif;
+    font-size: 12px;
+    font-weight: bold;
+}
+
+/* left icon */
 .sticky-titlebar::before {
     content: "";
-    display: inline-block;
 
     width: 14px;
     height: 14px;
 
     margin-right: 6px;
 
+    background-image: url("https://i.redd.it/kksrotgwyya61.png");
     background-size: contain;
     background-repeat: no-repeat;
+
+    display: inline-block;
 }
 
-/* tiny window icon */
-.sticky-titlebar::before {
-    background-image: url("https://i.redd.it/kksrotgwyya61.png");
-    margin-right: 6px;
-}
-
+/* right controls */
 .sticky-titlebar::after {
     content: "-  □  X";
 
@@ -611,37 +620,12 @@ body {
     border-bottom: 2px solid #404040;
 
     padding: 0 4px;
-    margin-left: auto;
 
     display: flex;
     align-items: center;
 }
 
-.sticky-titlebar {
-    justify-content: space-between;
-    position: relative;
-}
-
-.sticky-window {
-    background: #FFFF99;
-
-    /* thick Win98-style frame */
-    border-top: 3px solid #ffffff;
-    border-left: 3px solid #ffffff;
-    border-right: 3px solid #808080;
-    border-bottom: 3px solid #404040;
-
-    min-height: 260px;
-    display: flex;
-    flex-direction: column;
-
-    /* simple depth (not dramatic) */
-    box-shadow: 2px 2px 0 #b3b3b3;
-
-    transition: transform 0.15s ease;
-}
-
-/* ====CONTENT AREA===== */
+/* ====CONTENT AREA======== */
 .sticky-content {
     padding: 10px;
     font-family: Tahoma, sans-serif;
@@ -649,7 +633,6 @@ body {
     color: #000;
 }
 
-/* spacing fixes */
 .sticky-content h4 {
     margin-top: 10px;
     margin-bottom: 4px;
