@@ -33,8 +33,8 @@
 </nav>
 <div class="music-controls">
     <button onclick="playMusic()" class="music-btn">▶</button>
-    <button onclick="pauseMusic()" class="music-btn">⏸</button>
     <a href="https://www.youtube.com/watch?v=vGxHVf6RTVY" target="_blank" class="music-btn">🔗</a>
+    <button onclick="pauseMusic()" class="music-btn">⏸</button>
 </div>
 </header>
 
@@ -51,7 +51,7 @@
     <h1>About Me<br></h1>
 
     <div class="page-spacer"></div>
-    <p>Aspiring Computer Technician & I.T. Specialist<br></p>
+    <p>Aspiring <span id="role-text">I.T. Specialist</span></p>
 
     <div class="grow-element"> 
     <div class="page-spacer"></div>
@@ -515,7 +515,7 @@ window.onload = function () {
 
 <!-- now for the FUN SHIT -->
 
-<!-- YouTube API -->
+<!-- Music Sourcesd from youtube -->
 <script src="https://www.youtube.com/iframe_api"></script>
 
 <div id="music-player" style="display:none;"></div>
@@ -550,6 +550,30 @@ function pauseMusic() {
     if (isReady) player.pauseVideo();
 }
 </script>
+
+<!-- the many hopeful titles on the about me -->
     
+<script>
+const roles = [
+    "I.T. Specialist",
+    "Computer Technician",
+    "Software Developer",
+    "Device Troubleshooter",
+    "Cyber Security Agent",
+    "Database Administrator",
+    "Network Engineer",
+    "Computer Scientist",
+];
+
+let index = 0;
+const roleElement = document.getElementById("role-text");
+
+function rotateRole() {
+    index = (index + 1) % roles.length;
+    roleElement.textContent = roles[index];
+}
+
+setInterval(rotateRole, 2000);
+</script>    
 </body>
 </html>    
