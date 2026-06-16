@@ -48,7 +48,7 @@ html {
 }
 
 .grow-element:hover {
-  transform: scale(1.07); /* Grows the element by 7% */
+  transform: scale(1.05); /* Grows the element by 5% */
 }
 
 
@@ -342,9 +342,9 @@ html {
    ========================= */
 
 .toolbox-card {
-    border: 8px solid #001524;
+    border: 8px solid #FF7D00;
     border-radius: 16px;
-    background-color: #001524;
+    background-color: #FF7D00;
     padding: 32px;
 }
 
@@ -367,7 +367,7 @@ html {
 
 .skill-fill {
     height: 100%;
-    background-color: #001524;
+    background-color: #FF7D00;
     border-radius: 999px;
 }
 
