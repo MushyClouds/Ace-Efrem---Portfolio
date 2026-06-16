@@ -12,7 +12,8 @@
 <body>
 
 <div class="desktop">
-
+    
+    
     <div class="app-window">
 
 <div class="title-bar">
@@ -21,25 +22,101 @@
         Ace Efrem — MySpace Terminal
     </div>
 
-    <div class="close-button">
-        X
+    <div class="window-controls">
+        <div class="btn minimize"></div>
+        <div class="btn maximize"></div>
+        <div class="btn close">X</div>
     </div>
 
 </div>
+        
+<!--===this is where the entire site will lie===-->
+<div class="browser-bar">
 
+    <div class="tab active">
+        Ace Efrem - Profile
+    </div>
+
+    <div class="tab">
+        New Tab
+    </div>
+
+</div>
         <div class="app-content">
 
-            <div class="placeholder">
-                <h1>TITLE.</h1>
-                <p>is this working?</p>
-                <p>if working, rebuild everything in this box..?</p>
-            </div>
+<div class="myspace-container">
 
+    <!-- MYSPACE HEADER -->
+    <div class="myspace-header">
+
+        <div class="myspace-title">
+            Ace Efrem
+        </div>
+
+        <div class="myspace-subtitle">
+            Aspiring <span id="role-text">I.T. Specialist</span>
+        </div>
+
+    </div>
+
+    <!-- MAIN PAGE LAYOUT  -->
+    <div class="myspace-layout">
+
+        <div class="left-column">
+            <!-- PROFILE MODULE -->
+<div class="profile-module">
+
+    <!-- NAME -->
+    <div class="profile-name">
+        Ace Efrem
+    </div>
+
+    <!-- ROLE LINE -->
+    <div class="profile-role">
+        Aspiring <span id="role-text">I.T. Specialist</span>
+    </div>
+
+    <!-- SPACER (REUSABLE BLOCK) -->
+    <div class="spacer"></div>
+
+    <!-- PROFILE IMAGE -->
+    <img class="profile-pic" src="profilepic.png" alt="profile picture">
+
+    <!-- SPACER -->
+    <div class="spacer"></div>
+
+    <!-- SHORT BIO -->
+    <div class="profile-bio">
+        I like figuring out how things work on the inside, especially computers, hardware, and software.
+        I build, fix, and experiment with technology while learning new skills along the way.
+    </div>
+
+    
+    <div class="spacer"></div> <!-- THE GREAT SPACER -->
+
+    <!-- CONTACT BUTTON -->
+    <a class="contact-btn" href="#contact">
+        Contact
+    </a>
+
+</div>
+        </div>
+
+        <div class="right-column">
+            MAIN CONTENT 
+        </div>
+
+    </div>
+
+</div>
         </div>
 
     </div>
 
 </div>
 
+
+
+    
 </body>
 </html>
