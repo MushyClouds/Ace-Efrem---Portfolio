@@ -835,3 +835,20 @@ WIN98 STYLE FRAME FOR MSPAINT BOXES
 .color:nth-child(14) { background: #00ff88; }
 .color:nth-child(15) { background: #ffd000; }
 .color:nth-child(16) { background: #ffffff; }
+
+
+.extracurriculars-wrapper {
+    display: flex;
+    flex-direction: row;
+    gap: 12px;
+
+    align-items: flex-start;
+
+    flex-wrap: nowrap; /* keeps them in one line */
+    overflow-x: auto;  /* allows scroll if screen is too small */
+}
+
+/* optional: prevents shrinking */
+.paint-window {
+    flex: 0 0 auto;
+}
