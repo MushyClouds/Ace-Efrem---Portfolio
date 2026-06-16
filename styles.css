@@ -960,3 +960,114 @@ WIN98 STYLE FRAME FOR MSPAINT BOXES
 .paint-window {
     flex: 0 0 auto;
 }
+
+
+/* =========================
+   PROJECT GRID LAYOUT
+   ========================= */
+.projects-layout {
+    display: grid;
+    grid-template-columns: 20% 80%;
+    gap: 12px;
+    align-items: start;
+}
+
+/* shared window style (you already mostly have this) */
+.paint-window {
+    display: flex;
+    flex-direction: column;
+
+    background: #c0c0c0;
+
+    border-top: 3px solid #ffffff;
+    border-left: 3px solid #ffffff;
+    border-right: 3px solid #808080;
+    border-bottom: 3px solid #404040;
+
+    box-shadow: 2px 2px 0 #b3b3b3;
+}
+
+/* title bar */
+.paint-titlebar {
+    background: #000080;
+    color: white;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    padding: 4px 6px;
+
+    font-family: Tahoma;
+    font-size: 12px;
+}
+
+.window-controls {
+    display: flex;
+    gap: 2px;
+}
+
+.btn {
+    width: 16px;
+    height: 14px;
+
+    background: #c0c0c0;
+
+    border-top: 2px solid #ffffff;
+    border-left: 2px solid #ffffff;
+    border-right: 2px solid #404040;
+    border-bottom: 2px solid #404040;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    font-size: 10px;
+}
+
+/* =========================
+   LEFT ICON GRID
+   ========================= */
+.icon-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 14px;
+
+    background: white;
+    padding: 10px;
+    min-height: 420px;
+}
+
+.project-icon {
+    text-align: center;
+    font-family: Tahoma;
+    font-size: 11px;
+
+    cursor: pointer;
+
+    padding: 6px;
+}
+
+.project-icon img {
+    width: 32px;
+    height: 32px;
+    image-rendering: pixelated;
+}
+
+/* hover selection feel */
+.project-icon:hover {
+    background: #d4d0c8;
+    border: 1px dotted black;
+}
+
+/* =========================
+   RIGHT VIEWER PANE
+   ========================= */
+.project-main .paint-content {
+    background: white;
+    min-height: 420px;
+
+    padding: 12px;
+    font-family: Tahoma;
+    font-size: 12px;
+}
