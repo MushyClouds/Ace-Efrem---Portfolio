@@ -3,8 +3,6 @@
 <head>
 <meta charset="UTF-8">
 <title>Ace Efrem - Portfolio</title>
-
-<!-- THIS IS REQUIRED OR NOTHING WORKS, DON'T FORGET!!! -->
 <link rel="stylesheet" href="styles.css">
 </head>
 
@@ -12,131 +10,72 @@
 
 <div class="desktop">
 
-  <!--===this is everything (whole fake OS box)===-->
   <div class="app-window">
 
-    <!--=====================================================
-        WIN98 TITLE BAR
-    =====================================================-->
+    <!-- =====================================================
+         WIN98 TITLE BAR (window identity lives here)
+    ====================================================== -->
     <div class="title-bar">
 
-      <!-- LEFT SIDE -->
-      <div class="title-left">
-
         <div class="title-text">
-          Ace Efrem — Portfolio Terminal
+            Portfolio Terminal
         </div>
 
-        <!-- nav -->
-        <div class="header-nav">
-          <a href="#about">About</a>
-          <a href="#experience">Work</a>
-          <a href="#education">Education</a>
-          <a href="#extracurriculars">Extracurriculars</a>
-          <a href="#projects">Projects</a>
+        <!-- right side: splash + window buttons -->
+        <div class="title-right">
+
+            <div id="splash-text" class="splash-text">loading...</div>
+
+            <div class="window-controls">
+                <div class="btn minimize"></div>
+                <div class="btn maximize"></div>
+                <div class="btn close">X</div>
+            </div>
+
         </div>
-
-      </div>
-
-      <!-- RIGHT SIDE -->
-      <div class="title-right">
-
-        <!-- minecraft-style rotating splash text -->
-        <div id="splash-text" class="splash-text">loading...</div>
-
-        <!-- window controls -->
-        <div class="window-controls">
-          <div class="btn minimize"></div>
-          <div class="btn maximize"></div>
-          <div class="btn close">X</div>
-        </div>
-
-      </div>
 
     </div>
 
-    <!--=====================================================
-        FAKE BROWSER TAB BAR
-    =====================================================-->
+
+    <!-- =====================================================
+     FAKE BROWSER TAB BAR (ONLY tabs, no header content >:c )
+    ====================================================== -->
     <div class="browser-bar">
 
-      <div class="tab active">
-        Ace Efrem - Profile
-      </div>
-
-      <div class="tab">
-        New Tab
-      </div>
+        <div class="tab active">Profile</div>
+        <div class="tab">New Tab</div>
 
     </div>
 
-    <!--=====================================================
-        MAIN CONTENT AREA (everything scrolls inside here)
-    =====================================================-->
+
+    <!-- =====================================================
+         MAIN SCROLL AREA (the actual browser)
+    ====================================================== -->
     <div class="app-content">
 
-      <div class="myspace-container">
-
-        <!--=================================================
-            MYSPACE HEADER (blue site header)
-        =================================================-->
-        <div class="myspace-header">
+      <!-- ================= MYSPACE HEADER ================= -->
+      <div class="myspace-header">
 
           <div class="myspace-title">
-            Ace Efrem
+              Ace Efrem
           </div>
 
           <div class="myspace-subtitle">
-            Aspiring <span id="role-text">I.T. Specialist</span>
+              Aspiring <span id="role-text">I.T. Specialist</span>
           </div>
 
-        </div>
+      </div>
 
-        <!--=================================================
-            MAIN LAYOUT
-        =================================================-->
-        <div class="myspace-layout">
+      <!-- ================= MAIN LAYOUT ================= -->
+      <div class="myspace-layout">
 
           <div class="left-column">
-
-            <!-- PROFILE MODULE -->
-            <div class="profile-module">
-
-              <!-- profile title -->
-              <div class="profile-name">
-                About Me
-              </div>
-
-              <!-- SPACER (REUSABLE BLOCK) -->
-              <div class="spacer"></div>
-
-              <!-- PROFILE IMAGE -->
-              <img class="profile-pic" src="profilepic.png" alt="profile picture">
-
-              <!-- SPACER -->
-              <div class="spacer"></div>
-
-              <!-- SHORT BIO -->
-              <div class="profile-bio">
-                I like figuring out how things work on the inside, especially computers, hardware, and software.
-              </div>
-
-              <div class="spacer"></div>
-
-              <!-- CONTACT BUTTON -->
-              <a class="contact-btn" href="#contact">
-                Contact
-              </a>
-
-            </div>
-
+              LEFT PROFILE PANEL
           </div>
 
           <div class="right-column">
-            MAIN CONTENT
+              MAIN CONTENT
           </div>
-
-        </div>
 
       </div>
 
