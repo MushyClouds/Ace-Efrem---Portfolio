@@ -43,13 +43,17 @@ body {
     width: 1100px;
     height: 85vh;
 
-    border: 3px solid #000;
-    background: #ffffff;
+    background: #c0c0c0;
+
+    border-top: 2px solid #ffffff;
+    border-left: 2px solid #ffffff;
+    border-right: 2px solid #404040;
+    border-bottom: 2px solid #404040;
 
     display: flex;
     flex-direction: column;
 
-    box-shadow: 0px 6px 18px rgba(0,0,0,0.35); /* its whats making that big ol SHADOW OBVIOUSLY */
+    box-shadow: 0px 6px 18px rgba(0,0,0,0.45);
 }
 
 /* =========================
@@ -57,44 +61,81 @@ body {
    ========================= */
 
 .title-bar {
-    background: linear-gradient(to right, #0a3d91, #4aa3ff);
+    background: #000080; /* Win98 blue */
     color: white;
 
-    padding: 6px 10px;
+    padding: 3px 4px;
 
     display: flex;
     align-items: center;
     justify-content: space-between;
 
-    border-bottom: 2px solid #0b2a5a;
+    font-family: "Tahoma", sans-serif;
+    font-size: 13px;
 
-    font-family: Tahoma, sans-serif;
-    font-size: 14px;
+    border-top: 2px solid #ffffff;
+    border-left: 2px solid #ffffff;
+    border-right: 2px solid #404040;
+    border-bottom: 2px solid #404040;
 }
 
-/* fake old-school square X button */
-.close-button {
-    width: 22px;
-    height: 22px;
+/* title text MUST be visible */
+.title-text {
+    padding-left: 6px;
+    white-space: nowrap;
+}
+
+/* right side control cluster */
+.window-controls {
+    display: flex;
+    gap: 2px;
+}
+
+/* base button style */
+.btn {
+    width: 16px;
+    height: 14px;
 
     background: #c0c0c0;
-    border: 2px solid #808080;
+
+    border-top: 2px solid #ffffff;
+    border-left: 2px solid #ffffff;
+    border-right: 2px solid #404040;
+    border-bottom: 2px solid #404040;
 
     display: flex;
     align-items: center;
     justify-content: center;
 
-    font-weight: bold;
+    font-size: 10px;
     color: black;
 
-    cursor: default;
-    user-select: none;
+    line-height: 1;
 }
 
-.close-button:active {
-    border: 2px inset #808080;
+/* fake Win98 buttons */
+.btn.minimize::after {
+    content: "_";
+    transform: translateY(-2px);
 }
 
+.btn.maximize::after {
+    content: "□";
+    font-size: 9px;
+}
+
+.btn.close {
+    font-weight: bold;
+}
+
+.btn.close:active,
+.btn.minimize:active,
+.btn.maximize:active {
+    border-top: 2px solid #404040;
+    border-left: 2px solid #404040;
+    border-right: 2px solid #ffffff;
+    border-bottom: 2px solid #ffffff;
+}
 /* =========================
    SCROLLABLE CONTENT AREA
    ========================= */
@@ -121,11 +162,161 @@ body {
 }
 
 /* =========================
-   PLACEHOLDER CONTENT
+   MYSPACE-like CORE STYLING
    ========================= */
 
-.placeholder {
-    background: white;
-    border: 2px solid #000;
-    padding: 20px;
+.myspace-container {
+    font-family: "Tahoma", sans-serif;
+}
+
+/* header */
+.myspace-header {
+    background: #003399;
+    color: white;
+
+    padding: 10px;
+
+    border: 2px solid #001a66;
+    margin-bottom: 10px;
+}
+
+.myspace-title {
+    font-size: 22px;
+    font-weight: bold;
+}
+
+.myspace-subtitle {
+    font-size: 14px;
+    margin-top: 4px;
+}
+
+/* layout split */
+.myspace-layout {
+    display: grid;
+    grid-template-columns: 280px 1fr;
+    gap: 10px;
+}
+
+/* left profile column */
+.left-column {
+    background: #e6e6e6;
+    border: 2px solid #808080;
+    padding: 10px;
+    min-height: 300px;
+}
+
+/* right main content */
+.right-column {
+    background: #ffffff;
+    border: 2px solid #808080;
+    padding: 10px;
+    min-height: 300px;
+}
+
+/* =========================
+   FAKE BROWSER TAB BAR
+   ========================= */
+
+.browser-bar {
+    display: flex;
+    gap: 4px;
+
+    background: #d4d0c8; /* Win98 UI grey */
+    padding: 4px;
+
+    border-bottom: 2px solid #808080;
+}
+
+/* individual tabs */
+.tab {
+    background: #c0c0c0;
+
+    padding: 4px 10px;
+
+    font-family: Tahoma, sans-serif;
+    font-size: 12px;
+
+    border-top: 2px solid #ffffff;
+    border-left: 2px solid #ffffff;
+    border-right: 2px solid #404040;
+    border-bottom: none;
+
+    cursor: default;
+}
+
+/* active tab looks “pressed in” */
+.tab.active {
+    background: #ffffff;
+
+    border-top: 2px solid #404040;
+    border-left: 2px solid #404040;
+    border-right: 2px solid #ffffff;
+}
+
+/* =========================
+   PROFILE MODULE (LEFT PANEL)
+   ========================= */
+
+.profile-module {
+    font-family: Tahoma, sans-serif;
+}
+
+/* name like old profile header */
+.profile-name {
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 4px;
+}
+
+/* status line */
+.profile-role {
+    font-size: 12px;
+    color: #333;
+    font-style: italic;
+}
+
+/* reusable spacer */
+.spacer {
+    height: 10px;
+}
+
+/* profile image */
+.profile-pic {
+    width: 100%;
+    border: 2px solid #808080;
+}
+
+/* bio box */
+.profile-bio {
+    font-size: 12px;
+    line-height: 1.4;
+
+    background: #ffffff;
+    border: 2px inset #bcbcbc;
+
+    padding: 8px;
+}
+
+/* contact button (very 2000s UI feel) */
+.contact-btn {
+    display: inline-block;
+
+    padding: 4px 8px;
+
+    background: #d4d0c8;
+    border-top: 2px solid #ffffff;
+    border-left: 2px solid #ffffff;
+    border-right: 2px solid #404040;
+    border-bottom: 2px solid #404040;
+
+    font-size: 12px;
+    text-decoration: none;
+    color: black;
+}
+
+.contact-btn:active {
+    border-top: 2px solid #404040;
+    border-left: 2px solid #404040;
+    border-right: 2px solid #ffffff;
+    border-bottom: 2px solid #ffffff;
 }
