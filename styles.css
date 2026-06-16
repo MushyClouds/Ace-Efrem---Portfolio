@@ -80,6 +80,11 @@ html {
     scroll-margin-top: 150px;
 }
 
+/* starts at top of page */
+html, body {
+    scroll-behavior: smooth;
+    scroll-padding-top: 0;
+}
 
 /* =========================
    site wrappa
