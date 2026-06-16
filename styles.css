@@ -1102,3 +1102,38 @@ WIN98 STYLE FRAME FOR MSPAINT BOXES
 
     border: 2px inset #808080;
 }
+
+
+/* =========================
+   TASKBAR MUSIC PLAYER
+   ========================= */
+
+.taskbar-music {
+    display: flex;
+    gap: 4px;
+
+    margin-right: 8px;
+}
+
+.music-btn {
+    padding: 2px 8px;
+
+    background: #d4d0c8;
+
+    border-top: 2px solid #ffffff;
+    border-left: 2px solid #ffffff;
+    border-right: 2px solid #404040;
+    border-bottom: 2px solid #404040;
+
+    font-family: Tahoma, sans-serif;
+    font-size: 12px;
+
+    cursor: pointer;
+}
+
+.music-btn:active {
+    border-top: 2px solid #404040;
+    border-left: 2px solid #404040;
+    border-right: 2px solid #ffffff;
+    border-bottom: 2px solid #ffffff;
+}
