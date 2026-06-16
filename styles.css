@@ -681,3 +681,66 @@ body {
     padding-left: 18px;
     margin-top: 4px;
 }
+
+/* =========================
+    WIN98 PAINT EXTRACURRICULARS
+   ========================= */
+
+.paint-palette {
+    margin-top: 10px;
+
+    display: flex;
+    gap: 4px;
+
+    background: #c0c0c0;
+
+    border-top: 2px solid #ffffff;
+    border-left: 2px solid #ffffff;
+    border-right: 2px solid #404040;
+    border-bottom: 2px solid #404040;
+
+    padding: 4px;
+    width: fit-content;
+}
+
+/* base color squares */
+.color {
+    width: 16px;
+    height: 16px;
+    border: 1px solid #000;
+}
+
+/* neon palette */
+.color:nth-child(1) { background: #ff0055; }
+.color:nth-child(2) { background: #00ffcc; }
+.color:nth-child(3) { background: #fffb00; }
+.color:nth-child(4) { background: #7a00ff; }
+.color:nth-child(5) { background: #00ff00; }
+.color:nth-child(6) { background: #ff7a00; }
+.color:nth-child(7) { background: #00a2ff; }
+
+
+/* ============FORCE EXTRACURRICULAR PAINT BOXES INTO A ROW================ */
+
+/* this targets whatever container is holding the paint-canvas boxes */
+.paint-canvas {
+    width: 220px;
+    display: inline-block;
+    vertical-align: top;
+}
+
+/* makes sure they sit next to each other */
+.extracurriculars,
+.extracurriculars-card,
+div {
+    /* only affects layout flow, not appearance */
+}
+
+/* safer actual layout fix */
+body .extracurriculars-card {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    align-items: flex-start;
+    flex-wrap: nowrap;
+}
