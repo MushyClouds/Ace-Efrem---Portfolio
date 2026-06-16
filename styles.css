@@ -67,7 +67,7 @@ body {
     padding: 4px 8px;
 
     display: flex;
-    justify-content: space-between;
+    flex-direction: column; /* STACKS CONTENT */
     align-items: center;
 
     font-family: "Tahoma", sans-serif;
@@ -76,36 +76,28 @@ body {
     border-bottom: 2px solid #404040;
 }
 
-/* left side */
-.title-left {
+/* top row (title + controls + splash) */
+.title-top {
+    width: 100%;
     display: flex;
-    flex-direction: column;
-    gap: 3px;
-}
-
-/* right side */
-.title-right {
-    display: flex;
+    justify-content: space-between;
     align-items: center;
-    gap: 10px;
 }
 
-/* title text */
-.title-text {
-    font-weight: bold;
-}
-
-/* nav */
+/* center nav row */
 .header-nav {
     display: flex;
-    gap: 10px;
+    justify-content: center;
+    gap: 14px;
+    margin-top: 4px;
+    width: 100%;
 }
 
 .header-nav a {
     color: white;
     text-decoration: none;
     font-size: 11px;
-    padding: 2px 4px;
+    padding: 2px 6px;
 }
 
 .header-nav a:hover {
@@ -160,6 +152,34 @@ body {
     0%   { transform: scale(1) rotate(10deg); } /*start anim */
     50%  { transform: scale(1.05) rotate(10deg); }
     100% { transform: scale(1) rotate(10deg); }
+}
+
+.title-top {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    align-items: center;
+}
+
+/* right side group */
+.title-right {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-left: auto;
+}
+
+/* forces it right */
+.splash-text {
+    color: yellow;
+    font-family: "Comic Sans MS", cursive;
+    font-size: 14px;
+
+    transform: rotate(10deg);
+    white-space: nowrap;
+
+    animation: splashPulse 2s infinite ease-in-out;
+    margin-left: auto;
 }
 
 /* =========================
@@ -222,6 +242,17 @@ body {
     padding: 10px;
     border: 2px solid #001a66;
     margin-bottom: 10px;
+}
+
+.myspace-top-row { /*header*/
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header-nav a {
+    font-size: 13px;
+    padding: 4px 8px;
 }
 
 .myspace-title {
