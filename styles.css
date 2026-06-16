@@ -846,6 +846,7 @@ WIN98 STYLE FRAME FOR MSPAINT BOXES
 
     flex-wrap: nowrap; /* keeps them in one line */
     overflow-x: auto;  /* allows scroll if screen is too small */
+    margin: 0 auto;    /* Centers the wrapper horizontally */
 }
 
 /* optional: prevents shrinking */
