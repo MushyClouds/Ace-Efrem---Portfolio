@@ -6,7 +6,7 @@
 
 /* pushes content down so header doesn't cover it */
 body {
-    padding-top: 120px;
+    padding-top: 130px;
 }
 
 /* makes the thingies in the header smoothly scroll instead of jumping when clicked */
