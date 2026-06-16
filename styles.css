@@ -350,11 +350,16 @@ body {
 /*=== ufo noises (hover) ===== */
 
 .hover-grow {
-    transition: transform 0.2s ease-in-out;
+  /* Set the initial scale (normal state) */
+  transform: scale(1);
+  
+  /* Add a smooth transition (e.g., 0.3 seconds) */
+  transition: transform 0.2s ease-in-out;
 }
 
 .hover-grow:hover {
-    transform: scale(1.05);
+  /* Increase the size by 5% */
+  transform: scale(1.05);
 }
 
 /* =========================
