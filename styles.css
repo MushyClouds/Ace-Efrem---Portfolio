@@ -539,7 +539,7 @@ body {
 
 
 /* =========================
-   EDUCATION STICKYNOTES
+   EDUCATION WIN98 STICKYNOTES
    ========================= */
 
 .sticky-board {
@@ -549,43 +549,44 @@ body {
     margin-top: 10px;
 }
 
-/* ====WINDOW FRAME======== */
+/* ====OUTER WINDOW FRAME (THICK GREY BORDER)============= */
 .sticky-window {
-    background: #FFFF00;
+    background: #FFFF99;
 
-    border-top: 3px solid #ffffff;
-    border-left: 3px solid #ffffff;
-    border-right: 3px solid #808080;
-    border-bottom: 3px solid #404040;
+    /* thick Win98 frame */
+    border: 4px solid #808080;
+
+    /* inner bevel illusion */
+    box-shadow:
+        inset 2px 2px 0 #ffffff,
+        inset -2px -2px 0 #404040,
+        4px 4px 10px rgba(0, 0, 0, 0.25);
 
     min-height: 260px;
-
     display: flex;
     flex-direction: column;
 
-    box-shadow: 2px 2px 0 #b3b3b3;
-
-    transition: transform 0.15s ease, box-shadow 0.15s ease;
+    transition: transform 0.15s ease;
 }
 
-/* hover lift */
 .sticky-window:hover {
     transform: translateY(-3px);
-
-    box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.25);
 }
 
-/* ===TITLE BAR CONTROLS ONLY========= */
+/* ======TOP WINDOW TAB (TITLE BAR)========== */
 .sticky-titlebar {
+    background: #c0c0c0;
+
+    padding: 4px 6px;
+
     display: flex;
     justify-content: space-between;
     align-items: center;
 
-    padding: 5px 8px;
-
     font-family: Tahoma, sans-serif;
     font-size: 12px;
-    font-weight: bold;
+
+    border-bottom: 2px solid #808080;
 }
 
 /* left icon */
@@ -604,13 +605,16 @@ body {
     display: inline-block;
 }
 
-/* right controls */
-.sticky-titlebar::after {
-    content: "-  □  X";
+/* ====WINDOW BUTTON GROUP===== */
+.window-buttons {
+    display: flex;
+    gap: 2px;
+}
 
-    font-family: Tahoma, sans-serif;
-    font-size: 12px;
-    font-weight: bold;
+/* individual Win98 buttons */
+.win-btn {
+    width: 18px;
+    height: 16px;
 
     background: #c0c0c0;
 
@@ -619,13 +623,17 @@ body {
     border-right: 2px solid #404040;
     border-bottom: 2px solid #404040;
 
-    padding: 0 4px;
+    font-size: 10px;
+    line-height: 12px;
 
     display: flex;
     align-items: center;
+    justify-content: center;
+
+    cursor: default;
 }
 
-/* ====CONTENT AREA======== */
+/* ===CONTENT AREA====== */
 .sticky-content {
     padding: 10px;
     font-family: Tahoma, sans-serif;
