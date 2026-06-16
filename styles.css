@@ -346,3 +346,17 @@ body {
     text-decoration: none;
     color: black;
 }
+
+/* =========================
+        achievments and certs
+   ========================= */
+
+.badge-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 8px;
+}
+
+.badge {
+    padding: 7px 9px;
+}
