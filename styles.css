@@ -1,367 +1,93 @@
 /* =========================
-   base site stuff
+   OUTSIDE DEKSTOP WINDOW
    ========================= */
 
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-/* smooth scroll cus we fancy like that */
-html {
-    scroll-behavior: smooth;
-}
-
-/* pushes content below fixed header */
-body {
-    padding-top: 140px;
-    font-family: "Courier New", monospace;
-    background-color: #0b0f1a;
-    color: #FFECD1;
-
-    /* dr who cursor */
-    cursor: url("https://cur.cursors-4u.net/movie/mov-1/mov13.cur"), auto;
-}
-
-/* =========================
-   site shell
-   ========================= */
-
-.site {
-    border: 6px solid #2b2b2b;
-    background: #111827;
-    padding: 20px;
-}
-
-/* =========================
-   header (myspace-ish banner strip)
-   ========================= */
-
-.site-header {
+.desktop-background {
     position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    background: linear-gradient(90deg, #1a1a1a, #111);
-    border-bottom: 4px solid #444;
+    inset: 0;
 
+    background-image: url("https://cdn.mos.cms.futurecdn.net/muYtdjidKSRdUw3aBcSa83.png");
+
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    z-index: -1;
+}
+
+/* =========================
+   INSIDE DEKSTOP WINDOW
+   ========================= */
+
+body {
+    margin: 0;
+    background: #c0c0c0; /* classic old desktop grey */
+    font-family: "Courier New", monospace;
+}
+
+/* fake desktop background layer */
+.desktop {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* the “program window” */
+.app-window {
+    width: 1100px;
+    height: 85vh;
+    border: 4px solid #000;
+    background: #ffffff;
     display: flex;
     flex-direction: column;
-    align-items: center;
-
-    padding: 12px 0;
-    z-index: 1000;
+    box-shadow: 8px 8px 0px #000;
 }
 
-.site-name a {
-    font-size: 34px;
-    font-weight: bold;
-    color: #00ffcc;
-    text-decoration: none;
-    letter-spacing: 2px;
-}
-
-/* navigation looks like old tab bar */
-.site-navigation ul {
-    display: flex;
-    list-style: none;
-    gap: 10px;
-    flex-wrap: wrap;
-    justify-content: center;
-    margin-top: 10px;
-}
-
-.site-navigation a {
-    color: #c7d2fe;
-    text-decoration: none;
+/* fake title bar like old OS */
+.title-bar {
+    background: linear-gradient(to right, #000080, #1e90ff);
+    color: white;
     padding: 6px 10px;
-    border: 2px solid #333;
-    background: #1f2937;
-    font-size: 14px;
-}
-
-.site-navigation a:hover {
-    background: #00ffcc;
-    color: #000;
-}
-
-/* =========================
-   grow animation (kept from original vibe)
-   ========================= */
-
-.grow-element {
-    transition: transform 0.25s ease;
-}
-
-.grow-element:hover {
-    transform: scale(1.04);
-}
-
-/* =========================
-   page blocks (now more “profile sections”)
-   ========================= */
-
-.about-me-page,
-.work-experience-page,
-.academics-page,
-.extracurriculars-page,
-.projects-page {
-    margin-bottom: 40px;
-    border: 4px solid #333;
-    background: #0f172a;
-    padding: 24px;
-}
-
-/* =========================
-   about page grid
-   ========================= */
-
-.about-me-page {
-    display: grid;
-    grid-template-columns: 1fr 2fr;
-    grid-template-areas:
-        "profile certs"
-        "bio bio";
-    gap: 16px;
-}
-
-/* profile box still profile “card panel” */
-.profile-card {
-    grid-area: profile;
-    background: #1e293b;
-    border: 3px solid #666;
-    padding: 20px;
-}
-
-/* cert panel */
-.certifications-achievements-card {
-    grid-area: certs;
-    background: #1e293b;
-    border: 3px solid #666;
-    padding: 20px;
-}
-
-/* bio strip */
-.about-bio-card {
-    grid-area: bio;
-    background: #111827;
-    border: 3px solid #444;
-    padding: 16px;
-}
-
-/* rotating role text */
-#role-text {
-    color: #00ffcc;
-    font-weight: bold;
-}
-
-/* =========================
-   certificate grid
-   ========================= */
-
-.cert-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 10px;
-}
-
-.cert-card {
-    background: #0b1220;
-    border: 2px solid #555;
-    padding: 12px;
-    text-align: center;
-}
-
-.cert-card h4 {
-    font-size: 11px;
-    opacity: 0.7;
-}
-
-.cert-card h3 {
-    font-size: 14px;
-}
-
-.cert-card p {
-    font-size: 12px;
-    opacity: 0.8;
-}
-
-/* =========================
-   weird card (gif box thing)
-   ========================= */
-
-.weird-card {
-    background: #000;
-    border: 2px dashed #666;
-    min-height: 120px;
-
     display: flex;
     align-items: center;
-    justify-content: center;
-
-    color: #00ffcc;
-    font-size: 12px;
+    justify-content: space-between;
 }
 
-/* =========================
-   experience section
-   ========================= */
-
-.work-experience-page {
-    background: #0b1220;
-    border: 4px solid #333;
-}
-
-.experience-card {
-    background: #111827;
-    border: 2px solid #555;
-    padding: 20px;
-}
-
-.experience-row {
+/* fake window buttons */
+.title-buttons {
     display: flex;
-    gap: 16px;
+    gap: 6px;
 }
 
-.experience-row.reverse {
-    flex-direction: row-reverse;
+.dot {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    display: inline-block;
 }
 
-.job-image {
-    width: 40%;
-    height: 160px;
-    object-fit: cover;
-    border: 2px solid #444;
+.red { background: #ff5f57; }
+.yellow { background: #ffbd2e; }
+.green { background: #28c840; }
+
+/* title text */
+.title-text {
+    font-size: 14px;
+    letter-spacing: 1px;
 }
 
-.job-text {
-    width: 60%;
-}
-
-/* =========================
-   toolbox / skills (old UI panel style)
-   ========================= */
-
-.toolbox-card {
-    background: #000;
-    border: 3px solid #444;
+/* fake “scroll area” */
+.app-content {
+    flex: 1;
+    overflow-y: auto;
     padding: 20px;
-}
 
-.skill-bar {
-    height: 10px;
-    background: #222;
-}
-
-.skill-fill {
-    background: #00ffcc;
-    height: 100%;
-}
-
-/* =========================
-   academics
-   ========================= */
-
-.academics-page {
-    background: #111827;
-    border: 4px solid #333;
-}
-
-.academics-card {
-    background: #0b1220;
-    border: 2px solid #555;
-    padding: 20px;
-}
-
-.course-card {
-    background: #000;
-    border: 1px solid #333;
-    padding: 10px;
-}
-
-/* =========================
-   extracurriculars (forum-post vibe grid)
-   ========================= */
-
-.extracurriculars-page {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 16px;
-    background: #0b1220;
-    border: 4px solid #333;
-}
-
-.extracurriculars-card {
-    background: #111827;
-    border: 2px solid #555;
-    padding: 16px;
-}
-
-/* =========================
-   projects
-   ========================= */
-
-.projects-page {
-    background: #0b1220;
-    border: 4px solid #333;
-}
-
-.projects-grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 16px;
-}
-
-.projects-card {
-    background: #111827;
-    border: 2px solid #555;
-    padding: 20px;
-}
-
-/* =========================
-   footer (old signature block)
-   ========================= */
-
-.site-footer {
-    background: #000;
-    border-top: 4px solid #333;
-    padding: 20px;
-    text-align: center;
-    color: #aaa;
-}
-
-/* =========================
-   bottom music dock (joelgc-style fixed bar)
-   ========================= */
-
-.music-dock {
-    position: fixed;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-
-    background: #000;
-    border-top: 3px solid #00ffcc;
-
-    display: flex;
-    justify-content: center;
-    gap: 10px;
-
-    padding: 10px;
-    z-index: 9999;
-}
-
-.dock-btn {
-    background: #111;
-    border: 2px solid #444;
-    color: #00ffcc;
-    padding: 6px 10px;
-    cursor: pointer;
-    text-decoration: none;
-}
-
-.dock-btn:hover {
-    background: #00ffcc;
-    color: #000;
+    /* old embedded UI? */
+    background-image: repeating-linear-gradient(
+        0deg,
+        #ffffff,
+        #ffffff 24px,
+        #f3f3f3 25px
+    );
 }
